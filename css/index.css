@@ -1,0 +1,158 @@
+    @charset "UTF-8";
+    /*main部分start*/
+    .main-slider {
+        float: left;
+        width: 730px;
+        height: 454px;
+        margin: 12px 0 0 220px;
+        position: relative;
+    }
+    .main-slider a {
+        display: block;
+    }
+    .main-slider ul {
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        margin-left: -64px;
+    }
+    .main-slider li {
+        color: #FFF;
+        float: left;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 18px;
+        background-color: #3E3E3E;
+        margin: 0 2px;
+        cursor: pointer;
+    }
+    .main-slider .current {
+        background-color: #C81623;
+    }
+    .arrow a {
+        display: block;
+        position: absolute;
+        top:50%;
+        margin-top: -31px;
+        color: #FFF;
+        width: 28px;
+        height: 62px;
+        background: rgba(0,0,0, 0.3);
+        text-align: center;
+        font: 400 22px/62px "simsun";
+    }
+    .arrow a:hover {
+        background: rgba(0,0,0, 0.7);
+    }
+    .arrow .arrow-left {
+        left: 0;
+    }
+    .arrow .arrow-right {
+        right: 0;
+    }
+    .main-news {
+        display: block;
+        float: right;
+        height: 466px;
+        width: 250px;
+    }
+    .main-news-top {
+        height: 372px;
+        width: 248px;
+        margin: 12px 0 5px 0;
+        border: 1px solid #E4E4E4;
+        overflow: hidden;
+    }
+    .main-news-top-fast {
+        height: 163px;
+        border-bottom: 1px dashed #E4E4E4;
+    }
+    .main-news-top-fast-title {
+        height: 32px;
+        padding: 0 15px;
+        border-bottom: 1px dotted #E8E8F7;
+    }
+    .main-news-top-fast-title h3 {
+        font: 400 16px/32px "Microsoft YaHei";
+    }
+    .main-news-top-fast-title a {
+        font: 400 14px/32px "Consolas";
+    }
+    .main-news-top-fast-content {
+        padding: 5px 0 0 15px;
+    }
+    .main-news-top-fast-content li {
+        height: 24px;
+        line-height: 24px;
+    }
+    .main-news-top-fast-content li span {
+        font-weight: 700;
+    }
+    .main-news-top-money ul {
+        width: 260px;
+    }
+    .main-news-top-money li {
+        height: 70px;
+        width: 62px;
+        margin-left: -1px;
+        margin-top: -1px;
+        border: 1px solid #E8E8F7;
+        border-top: 0;
+        float: left;
+    }
+    .main-news-top-money a {
+        display: block;
+        width: 62px;
+        height: 30px;
+        padding-top: 40px;
+        text-align: center;
+        line-height: 30px;
+        position: relative;
+    }
+    .main-news-top-money i {
+        position: absolute;
+        top: 15px;
+        left: 18px;
+        width: 25px;
+        height: 25px;
+        background: url(../images/service.png) no-repeat;
+    }
+    .main-news-top-money .main-news-top-money-icon1 {
+        background-position: -145px -40px;
+    }
+    .main-news-top-money .main-news-top-money-icon2 {
+        background-position: -28px -40px;
+    }
+    .main-news-top-money .main-news-top-money-icon3 {
+        background-position: -173px -40px;
+    }
+    .main-news-top-money .main-news-top-money-icon4 {
+        background-position: -86px -40px;
+    }
+    .main-news-top-money .main-news-top-money-icon5 {
+        background-position: -115px -40px;
+    }
+    .main-news-top-money .main-news-top-money-icon6 {
+        background-position: -115px -70px;
+    }
+    .main-news-top-money .main-news-top-money-icon7 {
+        background-position: -58px -40px;
+    }
+    .main-news-top-money .main-news-top-money-icon8 {
+        background-position: 0 -70px;
+    }
+    .main-news-top-money .main-news-top-money-icon9 {
+        background-position: -28px -70px;
+    }
+    .main-news-top-money .main-news-top-money-icon10 {
+        background-position: -58px -70px;
+    }
+    .main-news-top-money .main-news-top-money-icon11 {
+        background-position: -86px -70px;
+    }
+    .main-news-top-money .main-news-top-money-icon12 {
+        background-position: 0 -40px;
+    }
+    /*main部分end*/
