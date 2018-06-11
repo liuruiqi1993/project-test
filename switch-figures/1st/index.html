@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			width: 480px;
+			height: 90px;
+		}
+		li{
+			list-style: none;
+			float: left;
+			margin: 10px;
+		}
+		a {
+			display: block;
+			text-decoration: none;
+			cursor: pointer;
+			text-align: center;
+		}
+		li img	{
+			width: 100px;
+		}
+		div{
+			width: 480px;
+			height: 250px;
+		}
+		div img {
+			width: 400px;
+			height: 250px;
+		}
+	</style>
+</head>
+<body>
+<ul id="small" >
+	<li><a href="images/1.jpg"><img src="images/1-small.jpg" alt=""></a></li>
+	<li><a href="images/2.jpg"><img src="images/2-small.jpg" alt=""></a></li>
+	<li><a href="images/3.jpg"><img src="images/3-small.jpg" alt=""></a></li>
+	<li><a href="images/4.jpg"><img src="images/4-small.jpg" alt=""></a></li>
+</ul>
+<div id="big">
+	<a href="#">
+		<img src="images/placeholder.png" alt="">
+	</a>
+</div>
+	<script>
+		var smallArr = document.getElementById("small").getElementsByTagName("a");
+//		console.log(smallArr);
+		var big = document.getElementById("big").getElementsByTagName("a")[0];
+//		console.log(big);
+		for(var i=0;i<smallArr.length;i++){
+			smallArr[i].onclick= function(){
+				big.getElementsByTagName("img")[0].src=this.href;
+				return false;
+			}
+
+		}
+	</script>
+</body>
+</html>

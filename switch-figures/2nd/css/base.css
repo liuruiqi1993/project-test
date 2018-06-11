@@ -1,0 +1,86 @@
+    body, ul, li, p, img{
+        margin: 0;
+        padding: 0;
+    }
+    ul, li{
+        list-style: none;
+    }
+    .center{
+        margin: 0 auto;
+    }
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: left;
+    }
+
+
+
+
+
+
+    /*slider---start*/
+    .slider{
+        width: 1000px;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+    }
+    .sliderImg {
+        width: 10000px;
+        height: 500px;
+        position: absolute;
+        left: 0;
+    }
+    .sliderImg li{
+        width: 1000px;
+        height: 500px;
+        float: left;
+    }
+    .sliderImg img{
+        width: 1000px;
+        height: 500px;
+    }
+    .sliderImg p{
+        color: #FFF;
+        margin: -515px 0;
+        text-align: center;
+        font: 100px/500px Arial, sans-serif;
+    }
+    .sliderBullet{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -40px;
+    }
+    .sliderBullet li{
+        width: 20px;
+        color: #FFF;
+        float: left;
+        text-align: center;
+        font: 20px/30px Arial, sans-serif;
+    }
+    li.sliderBulletCurrent{
+        font-size: 30px;
+    }
+    .sliderArrow{
+        display: none;
+    }
+    .sliderArrow span {
+        color: #FFF;
+        width: 80px;
+        height: 80px;
+        top: 200px;
+        text-align: center;
+        position: absolute;
+        background: rgba(0,0,0,.1);
+        font: 700 80px/80px 黑体, sans-serif;
+    }
+    .sliderArrowL{
+        left: 0;
+    }
+    .sliderArrowR{
+        right: 0;
+    }
+    /*slider---end*/
