@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<header class="common-header">
+    <a class="logo" href="#"></a>
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">陌陌网页版</a></li>
+        <li><a href="#">陌陌动态</a></li>
+        <li><a href="#">加入我们</a></li>
+        <li class="down-list">
+            <a href="#">关于我们</a>
+            <div class="list-detail">
+                <span>
+                    <a href="#">关于陌陌</a>
+                </span>
+                <span>
+                    <a href="#">联系我们</a>
+                </span>
+            </div>
+            <span></span>
+        </li>
+        <li class="down-list">
+            <a href="#">业务体系</a>
+            <div class="list-detail">
+                <span>
+                    <a href="#">陌陌游戏</a>
+                </span>
+                <span>
+                    <a href="#">陌陌直播</a>
+                </span>
+            </div>
+            <span></span>
+        </li>
+        <li class="down-list">
+            <a href="#">服务与帮助</a>
+            <div class="list-detail">
+                <span>
+                    <a href="#">账号服务</a>
+                </span>
+                <span>
+                    <a href="#">主办方活动</a>
+                </span>
+                <span>
+                    <a href="#">帮助中心</a>
+                </span>
+            </div>
+            <span></span>
+        </li>
+        <li><a href="#">投资者关系</a></li>
+    </ul>
+</header>
+<div class="ad-identity"><a href="#">广告</a></div>
+<div class="wrapper">
+    <header class="playerbanner">
+        <div class="video-ad">
+            <div class="banner">
+                <span class="player"></span>
+                <div class="entryCon">
+                    <a class="download-now" href="#">立即下载</a>
+                    <a class="vip" href="#">会员中心</a>
+                    <a class="ad-input" href="#">广告投放</a>
+                    <a class="live-guide" href="#">直播公会</a>
+                </div>
+            </div>
+            <div class="vad hide">
+                <video src="https://s.momocdn.com/w/u/others/2018/03/14/1521018106443-momo_jiangsida.mp4" controls muted></video>
+                <span class="close">&times;</span>
+            </div>
+            <script>
+                $(".player").on("click",function(){
+                    $(".banner").addClass("hide");
+                    $(".vad").removeClass("hide");
+                    $("video").attr("autoplay","autoplay");
+                    $("video")[0].load();
+                })
+
+                $(".close").on("click",function(){
+                    $("video")[0].pause();
+                    $("video").removeAttr("autoplay");
+                    $(".banner").removeClass("hide");
+                    $(".vad").addClass("hide");
+                });
+            </script>
+        </div>
+    </header>
+    <section class="sec-1">
+        <h2>用视频认识我</h2>
+        <p>进入陌陌的世界，去结识那些陌生而有趣的人</p>
+        <ul>
+            <li><img src="images/item1.jpg" alt="认识新朋友"></li>
+            <li><img src="images/item2.jpg" alt="一起去玩闹"></li>
+            <li><img src="images/item3.jpg" alt="实时距离"></li>
+            <li><img src="images/item4.jpg" alt="生活有更多可能"></li>
+        </ul>
+    </section>
+    <section class="sec-2">
+        <h2>超过三亿年轻人的社交选择</h2>
+        <p>每天数十万人加入陌陌找到新朋友<br>
+            <a href="#">数据来自QuestMobile</a>
+        </p>
+        <div class="photo-wall">
+            <ul class="wall-pace">
+                <li class="small"><img src="images/12.jpg" alt=""></li>
+                <li class="wide"><img src="images/19.jpg" alt=""><div class="info hide"><dl><dt>名字：</dt><dd class="name"></dd><dt>城市：</dt><dd class="city"></dd><dt>特征：</dt><dd class="chara"></dd></dl></div></li>
+                <li class="big"><img src="images/2.jpg" alt=""><div class="info hide"><dl><dt>名字：</dt><dd class="name"></dd><dt>城市：</dt><dd class="city"></dd><dt>特征：</dt><dd class="chara"></dd></dl></div></li>
+                <li class="long"><img src="images/13.jpg" alt=""></li>
+            </ul>
+            <ul class="wall-pace">
+                <li class="big"><img src="images/7.jpg" alt=""><div class="info hide"><dl><dt>名字：</dt><dd class="name"></dd><dt>城市：</dt><dd class="city"></dd><dt>特征：</dt><dd class="chara"></dd></dl></div></li>
+                <li class="long"><img src="images/38.jpg" alt=""></li>
+                <li class="small"><img src="images/22.jpg" alt=""></li>
+                <li class="wide"><img src="images/18.jpg" alt=""><div class="info hide"><dl><dt>名字：</dt><dd class="name"></dd><dt>城市：</dt><dd class="city"></dd><dt>特征：</dt><dd class="chara"></dd></dl></div></li>
+            </ul>
+            <ul class="wall-pace">
+                <li class="wide"><img src="images/36.jpg" alt=""><div class="info hide"><dl><dt>名字：</dt><dd class="name"></dd><dt>城市：</dt><dd class="city"></dd><dt>特征：</dt><dd class="chara"></dd></dl></div></li>
+                <li class="small"><img src="images/34.jpg" alt=""></li>
+                <li class="long"><img src="images/15.jpg" alt=""></li>
+                <li class="big"><img src="images/10.jpg" alt=""><div class="info hide"><dl><dt>名字：</dt><dd class="name"></dd><dt>城市：</dt><dd class="city"></dd><dt>特征：</dt><dd class="chara"></dd></dl></div></li>
+            </ul>
+            <script>
+                var name="";
+                var city="";
+                var chara="";
+                $(".wide, .big").mouseenter(function(){
+                    $(this).find('.info').slideDown(100);
+                });
+                $(".wide, .big").mouseleave(function(){
+                    $(this).find('.info').slideUp(100);
+                });
+            </script>
+        </div>
+    </section>
+    <section class="sec-3">
+        <h2>根据你的手机，选择下载</h2>
+        <ul>
+            <li><a href="#"><i class="iphone"></i>iPhone</a></li>
+            <li><a href="#"><i class="android"></i>Android</a></li>
+            <li><a href="#"><i class="windows"></i>WindowsPhone</a></li>
+            <li class="qrcode"></li>
+        </ul>
+    </section>
+    <section class="sec-4">
+        <ul>
+            <li>
+                <h3 class="titles">用户帮助</h3>
+                <span class="more"><a href=""></a></span>
+                <p>如何创建群组？如何注册陌陌帐号？<br>
+                    忘记密码怎么办？<br>
+                    在使用陌陌中遇到什么疑惑，<br>
+                    来这里，我们帮你解答</p>
+            </li>
+            <li>
+                <h3 class="titles">陌陌招聘</h3>
+                <span class="more"><a href=""></a></span>
+                <p>无论你是产品、技术还是设计大师，<br>
+                    又或者在其他方面有所建树，<br>
+                    随时欢迎热爱互联网的你，<br>
+                    与陌陌一起创造更好的社交体验</p>
+            </li>
+            <li class="news">
+                <h3 class="titles">陌陌动态</h3>
+                <span class="more"><a href=""></a></span>
+                <p><a href="">陌陌2018年Q1营收27.6亿人民币 净利润9亿人民币</a></p>
+                <p><a href="">陌陌2017全年净营收13.183亿美元 净利达3.682亿美元</a></p>
+                <p><a href="">陌陌宣布全资收购探探 战略升级扩张社</a></p>
+            </li>
+            <script>
+                var str = "";
+                for(var i= 0;i<$(".news p").length;i++){
+                    str = $(".news p:eq("+i+") a").text();
+                    if(str.length>20){
+                        str = str.substring(0,20)+"...";
+                        $(".news p:eq("+i+") a").text(str);
+                    }
+                }
+            </script>
+        </ul>
+    </section>
+</div>
+<footer>
+    <ul class="clearfix">
+        <li><a href="">关于陌陌</a></li>
+        <li><a href="">用户协议</a></li>
+        <li><a href="">招聘信息</a></li>
+        <li><a href="">联系我们</a></li>
+        <li><a href="">陌陌电脑版</a></li>
+    </ul>
+    <p>违法和不良信息举报电话: 028-62836666（7*24小时)</p>
+    <p><a href="">网上有害信息举报专区</a></p>
+    <p>www.immomo.com 2011-2018 © All Rights Reserved.</p>
+    <p>
+        <a href="">营业执照： 911101055790551576</a>
+        <a href="">出版物经营许可证新出发京零字第朝150033​号</a>
+    </p>
+    <p><a href="">电信与信息服务业务经营许可证：京ICP证120107号</a></p>
+    <p>
+        <a href="">广播电视节目制作经营许可证：（京）字第04106号</a>&nbsp;&nbsp;
+        <a href="">营业性演出许可证：京市演2300</a>
+    </p>
+    <p>
+        <a class="poli" href="">京公网安备 11010502015324号</a>&nbsp;&nbsp;
+        <a href="">京ICP备11036675号-2</a>
+    </p>
+    <p>
+        <a class="spon1" href=""> </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="spon2" href=""> </a>
+    </p>
+</footer>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</body>
+</html>

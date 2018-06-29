@@ -1,0 +1,463 @@
+@charset "UTF-8";
+
+    body,ul,li{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        overflow-x:hidden;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .clearfix:before,.clearfix:after{
+        content:"";
+        display:table;
+    }
+    .clearfix:after{clear:both;}
+    .hide{
+        display: none;
+    }
+
+
+    /*导航栏*/
+    .common-header{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 120px;
+        width: 1375px;
+        margin-left: -580px;
+        z-index: 1;
+        color: #fff;
+    }
+
+    .logo{
+        float: left ;
+        width: 215px;
+        height: 120px;
+        display: inline-block ;
+        background: url(../images/logo.png) 14px 37px no-repeat;
+    }
+    .common-header li{
+        position: relative;
+        padding: 0 30px;
+        height: 120px;
+        float: left ;
+        font: 400 14px/120px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+        background: url(../images/white-border.png) left center no-repeat;
+    }
+    .common-header a {
+        color: #FFF;
+    }
+    .common-header li:first-child{
+        background-image:none;
+    }
+
+    /*下拉列表*/
+    .down-list>span::after{
+        content: '⌵';
+        padding-left: 5px;
+        right: 10px;
+        top:0;
+        position: absolute;
+    }
+    .list-detail{
+        position: absolute;
+        top:90px;
+        width: 100%;
+        left: 0;
+        display: none;
+    }
+    .list-detail span{
+        display: block;
+        padding: 0 30px;
+        height: 40px;
+        background-color: #156bd4;
+        font: 400 14px/40px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+    }
+    .down-list > a:hover{
+        padding-bottom: 40px;
+    }
+    .list-detail:hover{
+        display: block;
+    }
+    .down-list > a:hover + .list-detail{
+        display: block;
+    }
+    .list-detail span:hover {
+        background-color: #0c5dbf;
+    }
+    .wall-pace dl{
+        margin: 30px 10px;
+    }
+
+
+    /*广告*/
+    .ad-identity{
+        position: fixed;
+        right: 28px;
+        top: 50px;
+        width: 38px;
+        height: 21px;
+        background-color: rgba(0,0,0,0.17);
+        text-align: center;
+        font: 400 14px/21px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+    }
+    .ad-identity a {
+         color: #FFF;
+    }
+
+
+    /*banner*/
+    .playerbanner{
+        height: 540px;
+        padding-top: 120px;
+        background-color: #1e78eb;
+    }
+
+    .playerbanner .video-ad{
+        margin: 0 auto;
+        width: 960px;
+        height: 540px;
+        position: relative;
+    }
+
+    .banner{
+        width: 1288px;
+        height: 540px;
+        top: 0;
+        left: 50%;
+        margin-left: -530px;
+        position: absolute;
+        background: url(../images/banner.png) left bottom no-repeat;
+    }
+
+    /*播放键*/
+    .player{
+        cursor: pointer;
+        display: block;
+        width: 84px;
+        height: 84px;
+        top: 165px;
+        left: 590px;
+        position: absolute;
+        background: url(../images/play.png) left bottom no-repeat;
+    }
+
+    .entryCon{
+        position: absolute;
+        width: 774px;
+        height: 55px;
+        top:398px;
+        left:0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .entryCon a{
+        width: 105px;
+        height: 51px;
+        color: #FFF;
+        padding-left: 65px;
+        border: 2px solid #FFF;
+        font: 400 20px/51px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+    }
+    .entryCon a:nth-child(1){
+        color: #1e78eb;
+        background: url(../images/icon.png) 21px -57px no-repeat #fff;
+    }
+    .entryCon a:nth-child(2){
+        background: url(../images/icon.png) 20px -163px no-repeat;
+    }
+    .entryCon a:nth-child(3){
+        background: url(../images/icon.png) -250px -32px no-repeat;
+    }
+    .entryCon a:nth-child(4){
+        background: url(../images/icon1.png) 18px 8px no-repeat;
+    }
+
+    .wrapper h2{
+        width: 1200px;
+        font: 100 30px/30px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+        color: #4a4a4a;
+        text-align: center;
+        }
+    .wrapper p{
+        font: 100 20px/20px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+        color: #6a6a6a;
+        text-align: center;
+        width: 1200px;
+    }
+    .vad{
+        position: absolute;
+        /*margin: 0 auto;*/
+        width: 939px;
+        height: 528px;
+        /*top: 0;*/
+        /*left: 0;*/
+        z-index: 100;
+        background-color: #000;
+        padding: 6px;
+    }
+    video {
+        width: 939px;
+        height: 528px;
+        display: block;
+        margin: 0 auto;
+    }
+    .close{
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        font-size: 60px;
+        line-height: 60px;
+        text-align: center ;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+
+
+    /*sec-1*/
+    .sec-1{
+        width: 1200px;
+        margin: 180px auto 0;
+    }
+    .sec-1 p{
+             margin: 22px 0 80px;
+    }
+    .sec-1 ul{
+        width: 1200px;
+        height: 430px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .sec-1 li {
+        margin: 2px;
+        height: 430px;
+        width: 290px;
+        float: left;
+    }
+
+    /*sec-2*/
+    .sec-2{
+        width: 1200px;
+        margin: 180px auto 0;
+    }
+    .sec-2 p a {
+        display: inline-block;
+        font-size: 12px;
+        padding-top: 16px;
+        color: #6a6a6a;
+    }
+    .photo-wall{
+        display: flex;
+        justify-content: center;
+        margin: 0 3px;
+    }
+    .wall-pace {
+        width: 392px;
+        height: 409px;
+        overflow: hidden;
+    }
+    .wall-pace li{
+        margin: 2px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+    .img{
+        object-fit: cover;
+    }
+    .small img{
+        width: 145px;
+        height: 145px;
+    }
+    .big img{
+        width: 258px;
+        height: 258px;
+    }
+    .long img{
+        width: 122px;
+        height: 258px;
+    }
+    .wide img{
+        width: 235px;
+        height: 145px;
+    }
+    .big:hover img, .wide:hover img{
+        transform: translate(0,-5px);
+        transition: all 0.2s;
+    }
+    .wall-pace .info{
+        width: 258px;
+        height: 150px;
+        font: 400 14px/20px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+        color: #FFF;
+        background-color: #1e78eb;
+        position: absolute;
+        left:0;
+        bottom: 0;
+    }
+    dl{
+        margin: auto 0;
+    }
+
+    /*sec-3*/
+    .sec-3{
+        width: 1200px;
+        margin: 180px auto 0;
+    }
+    .sec-3 ul{
+        padding-top: 50px;
+        width: 1200px;
+        margin: 0 auto;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+    }
+    .sec-3 li{
+        width: 245px;
+        height: 245px;
+        float: left;
+        margin: 5px;
+        border: 1px solid #e4e4e4;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    .sec-3 a{
+        width: 245px;
+        height: 174px;
+        display: block;
+        padding-top: 70px;
+        font: 500 16px/30px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+        color: #8b8a8a;
+        text-align: center;
+    }
+    .sec-3 i{
+        margin: 0 auto 20px;
+        display: block;
+        width: 43px;
+        height: 50px;
+    }
+    .iphone{
+        background: url(../images/icon.png) 0 0 no-repeat;
+    }
+    .android{
+        background: url(../images/icon.png) -78px 0 no-repeat;
+    }
+    .windows{
+        background: url(../images/icon.png) -154px 0 no-repeat;
+    }
+    .qrcode{
+        background: url(../images/qrcode.png) 70px 65px no-repeat;
+    }
+    .sec-3 li:nth-child(-n+3):hover{
+        color: #FFF;
+        border: 1px solid #1e78eb;
+        background-color: #1e78eb;
+        box-shadow: 10px 10px 25px #cacaca;
+    }
+    .sec-3 li:nth-child(-n+3):hover img, .sec-3 li:nth-child(-n+3):hover a{
+        filter: contrast(0%) brightness(1000%);
+    }
+
+
+
+
+    /*sec-4*/
+    .sec-4{
+        margin: 50px auto;
+        height: 140px;
+        width: 1020px;
+    }
+    .sec-ul{
+        display: flex;
+        justify-content: center;
+        height: 140px;
+        width: 1200px;
+    }
+    .sec-4 li{
+        float: left;
+        width: 259px;
+        height: 140px;
+        padding:0 60px 0 20px;
+        border-left: 1px dashed #9d9d9d;
+        position: relative;
+    }
+    .sec-4 .titles{
+        margin: 5px 0;
+        text-align: left;
+        font: 100 22px/22px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+        padding-bottom: 10px;
+        color: #434343;
+    }
+    .more{
+        position: absolute;
+        right: 60px;
+        top: 5px;
+        background: url(../images/icon.png) -180px -71px no-repeat;
+    }
+    .more a{
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+    .sec-4 p{
+        text-align: left;
+        margin: 0;
+        font: 100 14px/150% "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+        color: #6a6a6a;
+    }
+    .sec-4 p a{
+        color: #6a6a6a;
+    }
+    .sec-4 p a:hover{
+        color: #1e78eb;
+    }
+
+    /*footer*/
+    footer{
+        margin: 150px auto;
+        width: 1100px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font: 100 12px/20px "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+        color: #646464;
+    }
+    footer a{
+        display: inline-block;
+        font: 100 12px/150% "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+        color: #646464;}
+    footer li{
+        float: left;
+        margin: 20px;
+    }
+    footer p{
+        margin: 0;
+    }
+    .poli{
+        padding-left: 20px;
+        background: url(../images/poli.png) 0 0/ contain no-repeat;
+    }
+    .spon1{
+        margin-top: 10px ;
+        width: 20px;
+        height: 20px;
+        background: url(../images/spon1.png) 0 0/ contain no-repeat;
+    }
+    .spon2{
+        width: 20px;
+        height: 20px;
+        background: url(../images/spon2.jpg) 0 0/ contain no-repeat;
+    }
