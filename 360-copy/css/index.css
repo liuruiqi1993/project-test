@@ -1,0 +1,302 @@
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .section {
+        padding: 0 100px;
+        overflow: hidden;
+        position: relative;
+    }
+    /*第一页*/
+    .first>div{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+    .first .logo{
+        width: 251px;
+        height: 186px;
+        margin: 0 auto;
+        background-image: url(../images/logo.png);
+    }
+    .first .text{
+        text-align:center;
+        line-height:1;
+        margin:85px 0 45px;
+    }
+    .first img{
+        margin: 0 24px;
+        opacity:0;
+    }
+    .first .info{
+        height: 49px;
+        background: url(../images/info_1.png) center no-repeat;
+    }
+    .first.current img{
+        transition: 2s;
+        margin: 0 24px;
+        opacity: 1;
+    }
+
+
+    /*第二页*/
+    .second>div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .second .shield{
+        width: 428px;
+        height: 498px;
+    }
+    .second img{
+        display: block;
+        float: left;
+    }
+    .second img:nth-child(1){
+        transform: translate(-82px, 52px) rotate(-60deg);
+    }
+    .second img:nth-child(2){
+        transform: translate(0px, -84px) rotate(-30deg);
+    }
+    .second img:nth-child(3){
+        transform: translate(132px, -32px) rotate(60deg);
+    }
+    .second img:nth-child(4){
+        transform: translate(-68px, 98px) rotate(30deg);
+    }
+    .second img:nth-child(5){
+        transform: translate(65px, -5px) rotate(-70deg);
+    }
+    .second img:nth-child(6){
+        transform: translate(150px, 30px) rotate(-180deg);
+    }
+    .second img:nth-child(7){
+        transform: translate(28px, -23px) rotate(45deg);
+    }
+    .second img:nth-child(8){
+        transform: translate(48px, 81px) rotate(-80deg);
+    }
+    .second img:nth-child(9){
+        transform: translate(130px, 30px) rotate(80deg);
+    }
+
+    .second .info{
+        width: 635px;
+        height: 309px;
+        background: url(../images/info_2.png) center no-repeat;
+    }
+
+    .second.current img{
+        transition: 0.5s ;
+        transform: translate(0,0)  rotate(0deg);
+    }
+
+    /*第三页*/
+    .third>div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .third .info{
+        width: 631px;
+        height: 278px;
+        background: url(../images/info_3.png);
+    }
+    .third .circle{
+        width: 453px;
+        height: 449px;
+        background-image: url(../images/circle.png);
+        animation: rotateRocket 8s infinite linear;
+    }
+    .third .rocket{
+        position: absolute;
+        bottom: 50%;
+        margin-bottom:-102px;
+        right: 230px;
+        width: 204px;
+        height: 204px;
+        display: block;
+        float: left;
+        transform: translate(-500px,800px);
+        background-image: url(../images/rocket.png);
+    }
+
+    .third.current .rocket{
+        transition: 0.5s ease-out;
+        transform: translate(0,0);
+    }
+    @keyframes rotateRocket {
+        0%{
+            transform:rotate(0deg);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+
+
+    /*第四页*/
+    .fourth > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fourth .search {
+        width: 529px;
+        height: 320px;
+        position: relative;
+        transform: translateX(-150%);
+    }
+
+    .fourth .input {
+        width: 529px;
+        height: 66px;
+        background: url(../images/search.png);
+    }
+
+    .fourth .key {
+        position: absolute;
+        left: 20px;
+        top: 24px;
+        width: 0;
+        height: 22px;
+        background: url(../images/key.png) left center no-repeat;
+    }
+
+    .fourth .wrap {
+        width: 529px;
+        height: 393px;
+        transform: translateY(-13px);
+        overflow: hidden;
+    }
+
+    .fourth .result {
+         width: 100%;
+         height: 100%;
+         background: url(../images/result.png) no-repeat;
+         transform: translateY(-100%);
+     }
+
+    .fourth .info {
+        width: 612px;
+        height: 299px;
+        background: url(../images/info_4.png);
+    }
+
+    .fourth.current .search {
+        transition: 0.5s ease-out;
+        transform: translateX(0);
+    }
+
+    .fourth.current .key {
+        animation: type 1s steps(5) 1s forwards;
+    }
+    .fourth.current .result {
+        transition: all 0.5s ease-out 2.5s;
+        transform: translateY(0);
+    }
+
+    @keyframes type{
+        from{
+            width: 0;
+        }
+        to{
+            width: 100px;
+        }
+    }
+
+
+    /*第五页*/
+
+    .fifth > div {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+    .fifth .info {
+        height: 135px;
+        margin: 30px 0;
+        background: url(../images/info_5.png) center center no-repeat;
+    }
+    .fifth .broswer {
+        width: 1004px;
+        height: 573px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.15);
+        position: relative;
+    }
+    .left, .top, .right, .bottom{
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+    }
+    .left, .right{
+        height: 573px;
+        width: 1px;
+    }
+    .top, .bottom {
+        height: 1px;
+        width: 1004px;
+    }
+    .left{
+        top:0;
+        left: -1px;
+        transform:translateY(150%);
+    }
+    .right{
+        top:0;
+        right: -1px;
+        transform:translateY(-150%);
+    }
+    .top{
+        bottom:0;
+        left: 0;
+        transform:translateX(150%);
+    }
+    .bottom{
+        left:0;
+        right: 0;
+        transform:translateX(-150%);
+    }
+    .toolbar{
+        width: 1004px;
+        height: 79px;
+        position: absolute;
+        top:0;
+        margin:0 auto;
+        background-image: url(../images/toolbar.png);
+        opacity: 0;
+    }
+    .toolbar span{
+        position: absolute;
+        height: 27px;
+        width: 922px;
+        left: 70px;
+        top: 31px;
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    .extra {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 1004px;
+        height: 29px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        background: url(../images/extra.png) bottom right no-repeat;
+        opacity: 0;
+    }
+
+    .current .line{
+        transition: all 1s ease-in-out;
+        transform: translate(0,0);
+    }
+    .current .toolbar, .current .extra{
+        transition: all 1s 1s ease-in-out;
+        opacity: 1;
+    }
+
