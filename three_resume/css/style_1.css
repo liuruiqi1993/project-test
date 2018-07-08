@@ -1,0 +1,12 @@
+    h6{
+        font-size: 16px;
+    }
+    .base div, .base h6, .base p, .contact div, .contact h6,.contact p{
+        display: inline-block;
+    }
+    h6{
+        margin: 5px 5px 5px 0;
+    }
+    p{
+        margin: 5px 30px 5px 0;
+    }

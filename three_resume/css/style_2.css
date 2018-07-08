@@ -1,0 +1,22 @@
+    body{
+        display: flex;
+    }
+    h1{
+        background-color: blue;
+        margin:0;
+        padding:30px 30px 0;
+        color: #FFF;
+    }
+    .content{
+        padding:30px;
+    }
+    .base div, .base h6, .base p, .contact div, .contact h6,.contact p{
+        display: inline-block;
+    }
+    h6{
+        margin: 5px 5px 5px 0;
+        font-size: 16px;
+    }
+    p{
+        margin: 5px 30px 5px 0;
+    }

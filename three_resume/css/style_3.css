@@ -1,0 +1,36 @@
+    body{
+        display: table;
+    }
+    h1{
+        background-color: #222;  /*放在row里面padding就失效了*/
+        color: #FFF;
+        margin:0;
+        padding: 30px;
+    }
+    .content > div{
+        margin: 0;
+        display: table-row;
+        border-top: none;
+        border-left: none;
+    }
+    h3{
+        display: table-cell;
+        border-bottom: 1px solid #EEE; /*写在row里面不管用，写在table里只有外边框，写在cell管用*/
+        background-color: #DDD;
+        padding: 50px;
+        margin:0;
+    }
+    .content>div>div{
+        padding: 15px;    /*左边的padding-top影响了右边*/
+        display: table-cell;
+        border-bottom: 1px solid #EEE;
+        border-right: 1px solid #EEE;
+    }
+    h6,p{
+        display: inline-block;
+        font-size: 16px;
+        margin: 0;
+    }
+    .base div , .contact div{
+        display: inline-block;
+    }
