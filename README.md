@@ -8,5 +8,5 @@
 [二版](https://liuruiqi1993.github.io/project-test/switch-figures/2nd/index.html)
 
 3. JQ  
-[momo](https://liuruiqi1993.github.io/project-test/momo-copy/index.html)视频用的链接无法播放
+[momo](https://liuruiqi1993.github.io/project-test/momo-copy/index.html) 视频用的链接无法播放 人物介绍的蓝色滑块出不来
 
