@@ -411,7 +411,7 @@
         position: absolute;
     }
     .contacts li a{
-        color: #84827f;
+        color: #000;
         font:200 16px/160% "Montserrat", sans-serif;
     }
     .contacts div ul li:nth-child(1) i{
