@@ -3,7 +3,7 @@
         padding: 0;
         list-style: none;
         text-decoration: none;
-        font:400 12px/100% Montserrat ExtraLight, Montserrat;
+        font:400 12px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .white{
         color: #FFF;
@@ -42,11 +42,11 @@
     }
     .hello h1{
         margin-top: 200px;
-        font:200 62px/100% Montserrat ExtraLight, Montserrat;
+        font:200 62px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .hello h3{
         margin-top: 70px;
-        font:200 20px/160% Montserrat ExtraLight, Montserrat;
+        font:200 20px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .account{
         width: 768px;
@@ -58,7 +58,7 @@
     }
     .account h6{
         margin-top: 60px;
-        font:200 16px/100% Montserrat ExtraLight, Montserrat;
+        font:200 16px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .account p{
         margin-top: 20px;
@@ -90,12 +90,12 @@
     .ready>p{
         margin-top: 90px;
         text-align: center;
-        font:200 14px/100% Montserrat ExtraLight, Montserrat;
+        font:200 14px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .ready h3{
         margin: 30px 0 5px;
         text-align: center;
-        font:200 42px/120% Montserrat ExtraLight, Montserrat;
+        font:200 42px/120% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .items{
         display: flex;
@@ -109,12 +109,12 @@
         padding: 70px  70px 0 130px;
     }
     .items h6{
-        font:400 20px/120% Montserrat ExtraLight, Montserrat;
+        font:400 20px/120% "Montserrat ExtraLight", "Montserrat", sans-serif;
         margin-bottom: 20px;
     }
     .items p{
         color: #84827f;
-        font:200 16px/160% Montserrat ExtraLight, Montserrat;
+        font:200 16px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .items i{
         top: 80px;
@@ -154,11 +154,11 @@
         position: absolute;
     }
     .info h3{
-        font:200 42px/120% Montserrat ExtraLight, Montserrat;
+        font:200 42px/120% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .info p{
         margin-top: 35px;
-        font:200 18px/160% Montserrat ExtraLight, Montserrat;
+        font:200 18px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .more{
         width: 600px;
@@ -173,7 +173,7 @@
         margin: 50px 30px 0 0;
         display: inline-block;
         border: 1px solid #84827f;
-        font:200 12px/60px Montserrat ExtraLight, Montserrat;
+        font:200 12px/60px "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     a.check{
         color: #000;
@@ -215,7 +215,7 @@
     }
     .product h3{
         margin-top: 90px;
-        font:200 42px/100% Montserrat ExtraLight, Montserrat;
+        font:200 42px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .product div{
         width: 1170px;
@@ -226,7 +226,7 @@
     .product p{
         padding-top: 160px;
         width: 280px;
-        font:200 16px/160% Montserrat ExtraLight, Montserrat;
+        font:200 16px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .product div p:nth-child(1){
         background: url(../img/l1.png) center 90px no-repeat;
@@ -256,12 +256,12 @@
     .chart h6{
         width: 330px;
         padding-top: 70px;
-        font:200 20px/160% Montserrat ExtraLight, Montserrat;
+        font:200 20px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .chart p{
         width: 330px;
         padding-top: 30px;
-        font:200 16px/160% Montserrat ExtraLight, Montserrat;
+        font:200 16px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
 
 
@@ -273,11 +273,11 @@
     }
     .crew h3{
         margin: 90px 0 30px;
-        font:200 42px/100% Montserrat ExtraLight, Montserrat;
+        font:200 42px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .crew p{
         margin-bottom: 60px;
-        font:200 16px/160% Montserrat ExtraLight, Montserrat;
+        font:200 16px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .crew>div{
         display: flex;
@@ -307,11 +307,11 @@
     }
     .current .name{
         margin:100px auto 0;
-        font:200 20px/100% Montserrat ExtraLight, Montserrat;
+        font:200 20px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .current .title{
         margin:20px 0 40px;
-        font:200 12px/100% Montserrat ExtraLight, Montserrat;
+        font:200 12px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .follow {
         width: 210px;
@@ -353,7 +353,7 @@
     }
     .contacts form p{
         margin-bottom: 40px;
-        font:200 16px/100% Montserrat ExtraLight, Montserrat;
+        font:200 16px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .contacts form input{
         width: 338px;
@@ -391,17 +391,17 @@
     }
     .contacts div h3{
         margin-bottom: 30px;
-        font:200 42px/100% Montserrat ExtraLight, Montserrat;
+        font:200 42px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .contacts div p{
         margin-bottom: 70px;
-        font:200 16px/160% Montserrat ExtraLight, Montserrat;
+        font:200 16px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .contacts li{
         margin-bottom: 30px;
         padding-left: 40px;
         position: relative;
-        font:200 16px/160% Montserrat ExtraLight, Montserrat;
+        font:200 16px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .contacts li i{
         top:5px;
@@ -435,21 +435,21 @@
     .footer h6{
         color: #FFF;
         margin-bottom: 30px;
-        font:200 14px/100% Montserrat ExtraLight, Montserrat;
+        font:200 14px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     .footer li{
         margin-bottom: 30px;
     }
     .footer a{
         color: #84827f;
-        font:200 16px/100% Montserrat ExtraLight, Montserrat;
+        font:200 16px/100% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     div.addition{
         width: 250px;
     }
     .addition li{
         color: #84827f;
-        font:200 16px/160% Montserrat ExtraLight, Montserrat;
+        font:200 16px/160% "Montserrat ExtraLight", "Montserrat", sans-serif;
     }
     li.icon{
         width: 300px;
