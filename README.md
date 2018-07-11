@@ -1,8 +1,12 @@
-1. [jd](https://github.com/liuruiqi1993/project-test/blob/master/jd) html+css静态页面整合练习  
-![Image text](https://github.com/liuruiqi1993/project-test/blob/master/jd/images/jd1st.png)
+1. html+css  
+[jd](https://liuruiqi1993.github.io/project-test/jd/index.html)  
+[hellow World](https://liuruiqi1993.github.io/project-test/hellow_world/hello_world.html) 字体用的链接显示不出来  
+[360 brows](https://liuruiqi1993.github.io/project-test/360-copy/index.html)
 
-2. [图片切换](https://github.com/liuruiqi1993/project-test/blob/master/switch-figures) JS小练习  
-[一版](https://github.com/liuruiqi1993/project-test/blob/master/switch-figures/1st)：点击小图，大图切换  
-![Image text](https://github.com/liuruiqi1993/project-test/blob/master/switch-figures/1st/images/switch1st.gif)  
-[二版](https://github.com/liuruiqi1993/project-test/blob/master/switch-figures/2nd)：图片缓动动画  
-![Image text](https://github.com/liuruiqi1993/project-test/blob/master/switch-figures/2nd/images/switch2nd.gif)
+2. JS  
+[一版](https://liuruiqi1993.github.io/project-test/switch-figures/1st/index.html)
+[二版](https://liuruiqi1993.github.io/project-test/switch-figures/2nd/index.html)
+
+3. JQ 
+[momo](https://liuruiqi1993.github.io/project-test/momo-copy/index.html)视频用的链接无法播放
+
