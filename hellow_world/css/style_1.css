@@ -410,6 +410,10 @@
         height: 25px;
         position: absolute;
     }
+    .contacts li a{
+        color: #84827f;
+        font:200 16px/160% "Montserrat", sans-serif;
+    }
     .contacts div ul li:nth-child(1) i{
         background: #fff url(../img/icon.png) -112px 0 no-repeat;
     }
