@@ -1,4 +1,5 @@
 <?php
+    $header[] = "Content-type: application/x-www-form-urlencoded";
     $str = file_get_contents("info.json");
     $arr = json_decode($str);
     /*MORE THAN ONE*/
