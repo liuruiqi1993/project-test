@@ -102,6 +102,7 @@
         $("#getMore").click(function(){
             $.ajax({
                 url:"ajax.php",
+                dataType:"JSON",
                 success:function(data){
                     /*一次多张*/
                     var jsArr = JSON.parse(data);
