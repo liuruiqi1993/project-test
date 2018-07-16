@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .item{
+            width: 640px;
+            /* height: 452px; */
+            background-color: #eee;
+            margin-top: 50px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .item .cover{
+            display: block;
+        }
+        .item .cover img{
+            display: block;
+        }
+        .item .bottom{
+            height: 35px;
+            position: relative;
+        }
+        .item .bottom a{
+            text-decoration: none;
+            line-height: 35px;
+            font-family: '微软雅黑';
+            margin-left: 20px;
+            color: gray;
+        }
+        .item .bottom .rightBox{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+        .item .bottom .rightBox span{
+            line-height: 35px;
+            margin: 0 20px;
+            font-size: 15px;
+            /* font-family: "微软雅黑"; */
+            color: gray;
+        }
+        .item .bottom .rightBox span::before{
+            margin-right: 10px;
+            color: #dd5a64;
+        }
+        .getMore{
+            width: 100px;
+            height: 100px;
+            border: none;
+            background-color: skyblue;
+            position: fixed;
+            right: 100px;
+            top: 50%;
+            margin-top: -50px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+</head>
+<body>
+<div class="container">
+    <div class="item">
+        <a href="#" class="cover">
+            <img src="images/vol.859.jpg" alt="">
+        </a>
+        <div class="bottom">
+            <a href="#">vol.847 用一首歌来想象你</a>
+            <div class="rightBox">
+                <span class="icon-heart">18554</span>
+                <span class="icon-comment">292</span>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="button" value="加载更多" id="getMore">
+
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="../jq/template-native.js"></script>
+
+<!--生成模版-->
+<script type="text/template" id='template'>
+    <%for(var i=0;i<items.length;i++){%>
+    <div class="item">
+        <a href="#" class='cover'><img src="<%=items[i].path%>" alt=""></a>
+        <div class="bottom">
+            <a href="#"><%=items[i].name%></a>
+            <div class='rightBox'>
+                <span class='icon-heart'><%=items[i].star%></span>
+                <span class='icon-comment'><%=items[i].message%></span>
+            </div>
+        </div>
+    </div>
+    <%}%>
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#getMore").click(function(){
+            $.ajax({
+                url:"ajax.php",
+                success:function(data){
+                    /*一次多张*/
+                    var jsArr = JSON.parse(data);
+                    var obj = {items:jsArr};
+                    var resultStr=template('template',obj);
+                    $(".container").append(resultStr);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
