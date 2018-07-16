@@ -102,10 +102,12 @@
         $("#getMore").click(function(){
             $.ajax({
                 url:"ajax.php",
+                dataType:"JSON",
                 success:function(data){
+                    console.log(data);
                     /*一次多张*/
-                    var jsArr = JSON.parse(data);
-                    var obj = {items:jsArr};
+                    var obj = {items:data};
+                    console.log(obj);
                     var resultStr=template('template',obj);
                     $(".container").append(resultStr);
                 }
