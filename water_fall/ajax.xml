@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stars>
+    <person>
+        <name>黄子韬</name>
+        <path>img/tao.jpg</path>
+        <skill>go die</skill>
+    </person>
+    <person>
+        <name>岳云鹏</name>
+        <path>img/yue.jpg</path>
+        <skill>相声</skill>
+    </person>
+    <person>
+        <name>大头儿子</name>
+        <path>img/datou.jpg</path>
+        <skill>唱歌</skill>
+    </person>
+</stars>
