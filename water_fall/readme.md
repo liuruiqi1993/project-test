@@ -1,6 +1,7 @@
-1. [保持滚动条在最底部](https://www.cnblogs.com/blackwood/archive/2013/03/12/2955472.html)  
+1. [淇濇寔婊氬姩鏉″湪鏈�搴曢儴](https://www.cnblogs.com/blackwood/archive/2013/03/12/2955472.html)  
 window.scrollTo(0, document.body.scrollHeight);
 
-2. 添加jq方法  
+
+2. 娣诲姞jq鏂规硶  
 jQuery.fn.extend();
 
