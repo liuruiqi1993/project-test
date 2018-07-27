@@ -1,0 +1,93 @@
+    html,body{ /*加html之后，高度才变成手机的高度。否则是document的高度*/
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .jd_container{
+        width: 100%;
+        height: 100%;
+    }
+    .header{
+        width: 100%;
+        height: 44px;
+        background: url(../img/header-bg.png) 0 0/1px 44px repeat-x;
+        position: relative;
+        padding: 4px 50px 4px 40px;
+        z-index: 2;
+    }
+    .header a{
+        position: absolute;
+        width: 20px;
+        height: 44px;
+    }
+    .header .back{
+        top:0;
+        left: 10px;
+        background: url(../img/sprites.png) -20px 13px/200px 200px no-repeat;
+    }
+    .header a:last-child{
+        top:0;
+        right: 10px;
+        width: 25px;
+        background: url(../img/sprites.png) -58px 13px/200px 200px no-repeat;
+    }
+    .header .search{
+        width: 100%;
+        height: 36px;
+        padding-left: 10px;
+        line-height: 30px;
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+    }
+    .side{
+        width: 90px;
+    }
+    .side>.items{
+        width: 100%;
+        height: 100%;
+    }
+    .side>.items>.item{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        background-color: rgba(201,21,35,1);
+    }
+    .side>.items>.item.current{
+        background-color: rgba(201,21,35,0.7);
+    }
+    .side>.items>.item>a{
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        display: block;
+        color: #FFFFFF;
+    }
+    .content{
+        padding: 10px 10px 0;
+        overflow: hidden;
+    }
+    .content .bg{
+        width: 100%;
+    }
+    .content h6{
+        width: 100%;
+        margin: 5px 0;
+    }
+    .content .detail{
+        width: 100%;
+    }
+    .content .detail li{
+        float: left;
+        width: 33.333333333%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .content .detail li a{
+        width: 100%;
+    }
+    .content .detail li img{
+        width: 80%;
+    }
+
