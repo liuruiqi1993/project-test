@@ -468,10 +468,16 @@ fieldset[disabled] .navbar-user .btn-link:focus {
   margin: 0 auto;
 }
 .footer ul li {
+  padding: 0;
   float: left;
   list-style: none;
   font-size: 80px;
   width: 11.11111111%;
+}
+@media screen and (max-width: 1200px) {
+  .footer ul li {
+    width: 100px;
+  }
 }
 .footer ul li a {
   text-decoration: none;

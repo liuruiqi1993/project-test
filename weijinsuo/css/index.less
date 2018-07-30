@@ -480,10 +480,14 @@ fieldset[disabled] .navbar-user .btn-link:focus {
     padding: 20px 0 50px ;
     margin: 0 auto;
     li{
+      padding: 0;
       float: left;
       list-style: none;
       font-size: 80px;
       width: 11.11111111%;
+      @media screen and (max-width: 1200px){
+        width: 100px;
+      }
       a{
         text-decoration: none;
         color: white;
