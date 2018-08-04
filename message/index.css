@@ -1,0 +1,699 @@
+@charset "utf-8";
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Myriad Pro", sans-serif;
+  color: #585d68;
+}
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  color: #585d68;
+  text-decoration: none;
+}
+.name {
+  font-size: 16px;
+  font-weight: 600;
+}
+/*第一列第二列的选中效果小蓝点*/
+li.active::before {
+  content: "";
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: #2ca0f7;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-4px);
+  left: -2px;
+  box-shadow: 0 0 8px #2ca0f7;
+}
+/*设置图标*/
+.icon {
+  display: inline-block;
+}
+.icon i {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  /*第一列头部*/
+  /*第一列底部*/
+  /*第二列中间*/
+  /*红色蓝色徽章*/
+  /*第三列搜索框*/
+  /*页面右上角个人信息*/
+  /*第四列工具栏*/
+  /*第四列底部发送*/
+}
+.icon i::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.icon i.icon1 {
+  background: linear-gradient(#2ca0f7, #2380c6);
+}
+.icon i.icon1::after {
+  background: url(img/icon.png) -20px 20px no-repeat;
+}
+.icon i.icon2 {
+  background: linear-gradient(#917ae4, #7462b6);
+}
+.icon i.icon2::after {
+  background: url(img/icon.png) -20px -60px no-repeat;
+}
+.icon i.icon3 {
+  background: linear-gradient(#ec4b2f, #bd3c26);
+}
+.icon i.icon3::after {
+  background: url(img/icon.png) -20px -140px no-repeat;
+}
+.icon i.icon4 {
+  background: transparent;
+}
+.icon i.icon4::after {
+  background: url(img/icon.png) -20px -220px no-repeat;
+}
+.icon i.items {
+  background: url(img/icon.png) -30px -306px no-repeat;
+}
+.icon i.setting {
+  background: url(img/icon.png) -62px -306px no-repeat;
+}
+.icon i.icon5 {
+  background: url(img/icon.png) -111px -10px no-repeat;
+}
+.icon i.icon6 {
+  background: url(img/icon.png) -111px -45px no-repeat;
+}
+.icon i.icon7 {
+  background: url(img/icon.png) -111px -84px no-repeat;
+}
+.icon i.icon8 {
+  background: url(img/icon.png) -111px -120px no-repeat;
+}
+.icon i.left {
+  width: 20px;
+  margin-right: 10px;
+  vertical-align: text-bottom;
+}
+.icon i.right {
+  float: right;
+}
+.icon i.warnning {
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(#ec4b2f, #bd3c26);
+}
+.icon i.warnning::after {
+  content: "!";
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  padding-top: 2px;
+}
+.icon i.num {
+  width: auto;
+  height: 20px;
+  font-weight: 400;
+  color: #fff;
+  padding: 2px 7px 0;
+  border-radius: 11px;
+  background-color: #2ca0f7;
+}
+.icon i.micro {
+  background: url(img/icon.png) -79px -349px no-repeat;
+}
+.icon i.more {
+  background: url(img/icon.png) -115px -192px no-repeat;
+}
+.icon i.add-group {
+  background: url(img/icon.png) 2px -459px no-repeat;
+}
+.icon i.share-contact {
+  background: url(img/icon.png) -34px -459px no-repeat;
+}
+.icon i.delete {
+  background: url(img/icon.png) -70px -459px no-repeat;
+}
+.icon i.previous {
+  background: url(img/icon.png) -94px -162px no-repeat;
+}
+.icon i.next {
+  background: url(img/icon.png) -130px -162px no-repeat;
+}
+.icon i.send {
+  background: url(img/icon.png) -37px -334px no-repeat;
+}
+/*头像*/
+.photo {
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: grey;
+}
+.photo.photo1 {
+  background: url(img/1.png) 0 0 / cover no-repeat;
+}
+.photo.photo2 {
+  background: url(img/2.png) 0 0 / contain no-repeat;
+}
+.photo.photo3 {
+  background: url(img/3.png) 0 0 / contain no-repeat;
+}
+.photo.photo4 {
+  background: url(img/4.jpg) 0 0 / contain no-repeat;
+}
+.photo.photo5 {
+  background: url(img/5.png) 0 0 / contain no-repeat;
+}
+.photo.photo6 {
+  background: url(img/6.png) 0 0 / contain no-repeat;
+}
+.photo.photo7 {
+  background: url(img/7.png) 0 0 / contain no-repeat;
+}
+.photo.photo8 {
+  background: url(img/8.png) 0 0 / contain no-repeat;
+}
+/*第一，二列*/
+.menu {
+  float: left;
+  width: 350px;
+  height: 100%;
+  display: inline;
+  /*第一列*/
+  /*第二列*/
+}
+.menu .primary {
+  float: left;
+  background-color: #1d2531;
+  width: 100px;
+  height: 100%;
+  position: relative;
+  padding-bottom: 60px;
+  /*第一列顶部*/
+  /*第一列底部*/
+}
+.menu .primary .app-items {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+.menu .primary .app-items ul {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+.menu .primary .app-items ul li {
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  position: relative;
+}
+.menu .primary .app-items ul li a {
+  margin: 0 auto;
+  display: block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.menu .primary .button-action {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.menu .primary .button-action ul {
+  margin: 0 auto;
+  padding: 40px 25px;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+.menu .primary .button-action ul li {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+}
+.menu .primary .button-action ul li:first-child {
+  margin: 0;
+}
+.menu .primary .button-action ul li a {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.menu .secondary {
+  margin-left: 100px;
+  background-color: #222c3c;
+  width: 250px;
+  height: 100%;
+  padding: 5px 0 60px;
+  overflow: hidden;
+  position: relative;
+  /*第二列三个列表*/
+  /*第二列底部*/
+}
+.menu .secondary .menu-items {
+  width: 100%;
+}
+.menu .secondary .menu-items h6 {
+  padding: 0 30px;
+  margin: 30px 0 20px;
+  color: #5b6779;
+  height: 20px;
+  width: 100%;
+  position: relative;
+  font-size: 12px;
+  line-height: 20px;
+}
+.menu .secondary .menu-items h6 a {
+  position: absolute;
+  top: -3px;
+  right: 30px;
+  height: 20px;
+  width: 20px;
+}
+.menu .secondary .menu-items ul {
+  width: 100%;
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+.menu .secondary .menu-items ul li {
+  padding: 0 30px;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  line-height: 20px;
+}
+.menu .secondary .menu-items ul li a {
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
+  color: #b7c0cd;
+  text-decoration: none;
+  position: relative;
+  /*i{
+              //width: @icon;
+              &.num{
+                width: auto;
+              }
+            }*/
+}
+.menu .secondary .menu-items ul li a:hover {
+  font-weight: 600;
+  color: #fff;
+}
+.menu .secondary .menu-items ul li.active a {
+  font-weight: 600;
+  color: #fff;
+}
+.menu .secondary hr {
+  display: block;
+  margin: 0 30px;
+  padding: 0;
+  border-top: 1px solid #5b6779;
+}
+.menu .secondary .monthly-goal {
+  width: 100%;
+  padding: 20px 30px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  background-color: #222c3c;
+}
+.menu .secondary .monthly-goal p {
+  display: inline-block;
+}
+.menu .secondary .monthly-goal p:nth-child(2) {
+  float: right;
+}
+.menu .secondary .monthly-goal .progress {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #5b6779;
+}
+.menu .secondary .monthly-goal .progress span {
+  display: block;
+  background: linear-gradient(to left, #917ae4, #6655a0);
+  border-radius: 5px;
+  height: 5px;
+  width: 18.125%;
+}
+/*第三，四列*/
+.chat {
+  margin-left: 350px;
+  height: 100%;
+  /*第三，四列顶部*/
+  /*第三列*/
+  /*第四列对话窗*/
+}
+.chat header {
+  min-width: 940px;
+  padding: 0 30px;
+  height: 80px;
+  border-bottom: 1px solid #e6e9ec;
+  /*第三，四列顶部个人信息*/
+}
+.chat header h1 {
+  font-size: 24px;
+  line-height: 80px;
+  margin: 0;
+  display: inline-block;
+}
+.chat header .my-profile {
+  width: 230px;
+  height: 80px;
+  position: relative;
+  float: right;
+  padding: 15px 30px 15px 70px;
+}
+.chat header .my-profile > a {
+  text-decoration: none;
+  position: absolute;
+}
+.chat header .my-profile > a.photo {
+  left: 0;
+}
+.chat header .my-profile > a.photo.photo::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px #1bb934, 0 0 0 6px #fff;
+}
+.chat header .my-profile > a.icon {
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 30px;
+}
+.chat header .my-profile p {
+  margin: 5px 0 0;
+}
+.chat header .my-profile p.name a {
+  color: #2ca0f7;
+}
+.chat header .my-profile p.title a {
+  color: #b5b5b5;
+}
+.chat .more-chats {
+  float: left;
+  width: 400px;
+  height: inherit;
+  border-right: 1px solid #e6e9ec;
+  margin-bottom: 80px;
+  /*第三列搜索框*/
+  /*第三列动态框*/
+}
+.chat .more-chats .search {
+  padding: 20px 30px;
+  height: 70px;
+  position: relative;
+  border-bottom: 1px solid #e6e9ec;
+}
+.chat .more-chats .search input {
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  padding-left: 15px;
+  border: 1px solid #e6e9ec;
+}
+.chat .more-chats .search .icon {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  height: 20px;
+  width: 20px;
+}
+.chat .more-chats .news-group {
+  padding-bottom: 150px;
+  height: 100%;
+}
+.chat .more-chats .news-group .news {
+  width: 100%;
+  height: 130px;
+  padding: 0 20px 0 30px;
+  border-bottom: 1px solid #e6e9ec;
+  overflow: hidden;
+  /*第三列动态框个人信息*/
+}
+.chat .more-chats .news-group .news .profile {
+  width: 100%;
+  height: 80px;
+  padding: 15px 70px;
+  position: relative;
+}
+.chat .more-chats .news-group .news .profile > a {
+  text-decoration: none;
+  position: absolute;
+}
+.chat .more-chats .news-group .news .profile > a.photo {
+  left: 0;
+}
+.chat .more-chats .news-group .news .profile > a.date {
+  right: 0;
+  top: 20px;
+  color: #7f8fa4;
+}
+.chat .more-chats .news-group .news .profile p {
+  margin: 5px 0 0;
+}
+.chat .more-chats .news-group .news .profile p.title a {
+  color: #b5b5b5;
+}
+.chat .more-chats .news-group .news.active {
+  border-left: 3px solid #2ca0f7;
+}
+.chat .more-chats .news-group .news.active .profile p.name a {
+  color: #2ca0f7;
+}
+.chat .more-chats .news-group .news.active .profile p.name a::before {
+  content: "● ";
+}
+.chat .more-chats .news-group .news .share span {
+  display: block;
+  width: auto;
+  height: 40px;
+  float: right;
+  padding: 10px 0 10px 10px;
+}
+.chat .open-chat {
+  margin-left: 400px;
+  min-width: 540px;
+  height: inherit;
+}
+.chat .open-chat .person {
+  width: 100%;
+  height: 70px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e6e9ec;
+}
+.chat .open-chat .person .statu {
+  line-height: 30px;
+  font-size: 18px;
+  display: inline-block;
+}
+.chat .open-chat .person .statu span {
+  margin-left: 20px;
+}
+.chat .open-chat .person .statu span.online {
+  color: #1bb934;
+}
+.chat .open-chat .person .statu span.offline {
+  color: #ffe212;
+}
+.chat .open-chat .person .statu span.busy {
+  color: #ec4b2f;
+}
+.chat .open-chat .person .tool {
+  display: inline-block;
+  width: 320px;
+  height: 30px;
+  float: right;
+}
+.chat .open-chat .person .tool .toolbar {
+  display: inline-block;
+  width: 109px;
+  height: 100%;
+  border-radius: 5px;
+  line-height: 100%;
+  background: linear-gradient(#fff, #e6e6e6);
+  overflow: hidden;
+  border: 1px solid #e6e9ec;
+}
+.chat .open-chat .person .tool .toolbar a {
+  padding: 0;
+  margin: 0;
+  width: 35px;
+  height: 28px;
+  border-right: 1px solid #e6e9ec;
+  box-sizing: content-box;
+}
+.chat .open-chat .person .tool .toolbar a:last-child {
+  border: none;
+}
+.chat .open-chat .person .tool .page {
+  display: inline-block;
+  line-height: 30px;
+  height: 100%;
+  width: 190px;
+  border-left: 1px solid #e6e9ec;
+  padding-left: 20px;
+  margin: 0 0 0 20px;
+  float: right;
+}
+.chat .open-chat .person .tool .page p {
+  margin: 0;
+  display: inline-block;
+}
+.chat .open-chat .person .tool .page ul {
+  display: inline-block;
+  float: right;
+  height: 100%;
+  width: 73px;
+  margin-left: 20px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #e6e9ec;
+  border-radius: 5px;
+}
+.chat .open-chat .person .tool .page ul li {
+  float: left;
+  background: linear-gradient(#fff, #e6e6e6);
+  box-sizing: content-box;
+  width: 35px;
+  height: 100%;
+}
+.chat .open-chat .person .tool .page ul li:first-child {
+  border-right: 1px solid #e6e9ec;
+}
+.chat .open-chat .person .tool .page ul li a {
+  width: 100%;
+  height: 100%;
+}
+.chat .open-chat .dialog {
+  position: relative;
+  height: 100%;
+}
+.chat .open-chat .dialog .history hr {
+  height: 1px;
+  border-top: 1px solid #e6e9ec;
+  margin: 10px 0 0;
+}
+.chat .open-chat .dialog .history .sending-date {
+  display: block;
+  width: auto;
+  margin: -10px auto 20px;
+  color: #7f8fa4;
+  text-align: center;
+}
+.chat .open-chat .dialog .history .sending-date span {
+  padding: 0 20px;
+  background-color: #fff;
+}
+.chat .open-chat .dialog .history .sending-date span.newly {
+  color: #2ca0f7;
+}
+.chat .open-chat .dialog .history .speech {
+  padding: 0 30px 10px 100px;
+  position: relative;
+}
+.chat .open-chat .dialog .history .speech .photo {
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+.chat .open-chat .dialog .history .speech .send-time {
+  margin-left: 10px;
+  color: #7f8fa4;
+}
+.chat .open-chat .dialog .history .speech .message {
+  margin: 10px 0;
+}
+.chat .open-chat .dialog .history .speech .graphic {
+  display: inline-block;
+  width: 156px;
+  height: 102px;
+  border-radius: 5px;
+  margin: 15px 15px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.chat .open-chat .dialog .history .speech .graphic img {
+  width: 100%;
+  height: 100%;
+}
+.chat .open-chat .dialog .history .speech .graphic:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5) url(img/icon.png) -170px -364px no-repeat;
+}
+.chat .open-chat .dialog .send-message {
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+  padding: 20px 30px 20px 80px;
+}
+.chat .open-chat .dialog .send-message button {
+  border: 1px solid #e6e9ec;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 31px;
+  top: 20px;
+  outline: none;
+  background: linear-gradient(#fff, #e6e6e6);
+  border-radius: 5px 0 0 5px;
+}
+.chat .open-chat .dialog .send-message button .send {
+  width: 100%;
+  height: 100%;
+}
+.chat .open-chat .dialog .send-message textarea {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 20px;
+  height: 50px;
+  border: 1px solid #e6e9ec;
+  overflow: hidden;
+  border-radius: 0 5px 5px 0;
+  resize: none;
+  outline: none;
+}
