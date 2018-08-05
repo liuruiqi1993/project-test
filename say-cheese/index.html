@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        width: 480px;
+        height: 480px;
+        overflow: hidden;
+    }
+    img{
+        width: 480px;
+        height: 8160px;
+    }
+</style>
+<body>
+<div>
+    <img src="img.jpg" alt="">
+</div>
+<script>
+    var img = document.querySelector("img");
+    var iHeight = img.height;
+    var dHeight = document.querySelector("div").offsetHeight;
+    var bool = true;
+    var n = iHeight/dHeight;
+    var time = 1;
+    var distance = 0;
+    var animation = function(){
+        if(Math.floor(time/n)%2 == 0){
+            distance+=dHeight;
+        }else{
+            distance-=dHeight
+        };
+        img.style.transform = "translateY(-"+distance+"px)";
+        time++;
+    }
+    var timer = setInterval(animation,50)
+
+</script>
+</body>
+</html>
