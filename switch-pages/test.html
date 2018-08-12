@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <style>
+        .hide{
+        display: none!important;
+        }
+        .pagination{
+            margin: 0 auto;
+            padding: 50px;
+            list-style: none;
+            text-align: center;
+        }
+        .pagination li{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            line-height: 30px;
+            margin: 0 5px 0 0;
+            font-size: 14px;
+            text-align: center;
+            border: 1px solid #00bc9b;
+            color: #00bc9b;
+            cursor: pointer;
+        }
+        .pagination li.current,
+        .pagination li:hover{
+            background: #00bc9b;
+            color: #ffffff;
+        }
+        .demo {
+            margin: 10px 0;
+            padding: 10px;
+            background: #eeeeee;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul class="pagination" id="page">
+        <li>首页</li>
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>末页</li>
+    </ul>
+	<script>
+        //伪数组转数组，转后才能用slice,map
+        var makeArray = function(obj){
+            return Array.prototype.slice.call(obj,0);
+        }
+
+        var page = document.getElementById("page");
+        var pages = makeArray(page.getElementsByTagName("li"));
+        var total = pages.length-2;
+        var current = page.querySelector(".current").innerText;
+
+        //初始化
+        pagination(total,current);
+        //跳到首页
+        pages[0].onclick=function(){
+            current = 1;
+            pagination(total,current);
+        }
+        //跳到末页
+        pages[total+1].onclick=function(){
+            current = total;
+            pagination(total,current);
+        }
+        //点击切换页面
+        pages.slice(1,total+1).map(function(a){
+            a.onclick = function(){
+                current=a.innerText;
+                pagination(total,current);
+            }
+        });
+        //显示规则
+        function pagination(total, current) {
+            current = parseInt(current);
+            var addHide = function(a){
+                a.className="hide";
+            }
+            var addCurrent = function(a){
+                a.className="current";
+            }    
+            var clear = function(a){
+                a.className="";
+            }
+            if(total==Math.floor(total)&&
+               current==Math.floor(current)&&
+               current>=1&&
+               current<=total){
+                //总页数小于5，全显示出来，去掉首页末页
+                if(total<5){
+                    pages.slice(0,pages.length).map(addHide);
+                    pages.slice(1,total+1).map(clear);
+                    addCurrent(pages[current]);
+                }
+                //总页数大于等于5
+                else{
+                    //current可以居中，首页末页都加上
+                    if(current>2 && current<=total-2){
+                        clear(pages[0]);
+                        clear(pages[total+1]);
+                        pages.slice(1,total+1).map(addHide);
+                        console.log(pages.slice(current-2,current+3));
+                        pages.slice(current-2,current+3).map(clear);
+                        addCurrent(pages[current]);
+                    }
+                    //current离首页近，去掉首页，保证有末页
+                    else if(current<=2){
+                        clear(pages[total+1]);
+                        pages.slice(0,total+1).map(addHide);
+                        pages.slice(1,6).map(clear);
+                        addCurrent(pages[current]);
+                    }
+                    //current离末页近，去掉末页，保证有首页
+                    else if(current>total-2){
+                        clear(pages[0]);
+                        pages.slice(1,total+2).map(addHide);
+                        pages.slice(total-4,total+1).map(clear);
+                        addCurrent(pages[current]);
+                    }
+                }
+            }else{
+                //页数不符合正整数，并且 1 <= current <= total
+                pages.map(addHide);
+            }
+        }
+	</script>
+</body>
+</html>

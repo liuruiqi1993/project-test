@@ -6,6 +6,7 @@
 [Messages](https://liuruiqi1993.github.io/project-test/message/index.html)（最右栏宽度自适应，用的less）
 
 2. JS  
+[分页组件](https://liuruiqi1993.github.io/project-test/switch-pages/test.html)  
 [点击切换图片](https://liuruiqi1993.github.io/project-test/switch-figures/1st/index.html)  
 [轮播图](https://liuruiqi1993.github.io/project-test/switch-figures/2nd/index.html)  
 [动画](https://liuruiqi1993.github.io/project-test/say-cheese/index.html)
