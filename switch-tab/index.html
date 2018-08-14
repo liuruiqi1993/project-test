@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="tab.css">
+</head>
+<body>
+<div class="wrapper" id="wrapper">
+    <ul class="tab" id="tab-menu">
+        <li class="tab-item active">国际大牌<span>◆</span></li>
+        <li class="tab-item">国妆名牌<span>◆</span></li>
+        <li class="tab-item">清洁用品<span>◆</span></li>
+        <li class="tab-item">男士精品</li>
+    </ul>
+    <div class="products" id="tab-main">
+        <div class="main selected">
+            <a href="javascript:void(0)"><img src="imgs/guojidapai.jpg" alt=""/></a>
+        </div>
+        <div class="main">
+            <a href="javascript:void(0)"><img src="imgs/guozhuangmingpin.jpg" alt=""/></a>
+        </div>
+        <div class="main">
+            <a href="javascript:void(0)"><img src="imgs/qingjieyongpin.jpg" alt=""/></a>
+        </div>
+        <div class="main">
+            <a href="javascript:void(0)"><img src="imgs/nanshijingpin.jpg" alt=""/></a>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+<script>
+    var tb = new Tab({
+        tabMenus: "tab-menu",
+        tabMains: "tab-main",
+        auto: true
+    });
+</script>
+</body>
+</html>

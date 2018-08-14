@@ -10,7 +10,8 @@
 [点击切换图片](https://liuruiqi1993.github.io/project-test/switch-figures/1st/index.html)  
 [轮播图](https://liuruiqi1993.github.io/project-test/switch-figures/2nd/index.html)  
 [动画](https://liuruiqi1993.github.io/project-test/say-cheese/index.html)  
-[增删改](https://liuruiqi1993.github.io/project-test/song/index.html)
+[增删改](https://liuruiqi1993.github.io/project-test/song/index.html) 
+[tab切换](https://liuruiqi1993.github.io/project-test/switch-tab/index.html)
 
 3. JQ  
 [momo](https://liuruiqi1993.github.io/project-test/momo-copy/index.html) 视频声音被我关了  
