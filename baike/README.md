@@ -17,5 +17,3 @@ ul外面的div里如果不加col-xs-12，那h3和caption中间的间距会变,�
 2. 再并列塌陷：thumbnail本身有一个margin-button,这个margin-button与margin-top再塌陷一次。
 
 blockquote中footer加杠，变灰色cite变斜
-
-.
