@@ -22,4 +22,5 @@ jd移动版 [第一页](https://github.com/liuruiqi1993/project-test/tree/master
 [瀑布流](https://liuruiqi1993.github.io/project-test/water_fall/ajax.html)
 
 5. bootstrap  
-[微金所](https://liuruiqi1993.github.io/project-test/weijinsuo/index.html)
+[微金所](https://liuruiqi1993.github.io/project-test/weijinsuo/index.html)  
+[人物介绍](https://liuruiqi1993.github.io/project-test/baike/index.html)
