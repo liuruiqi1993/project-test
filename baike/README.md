@@ -12,7 +12,7 @@ padding: 9px;
 
 col-sm-offset-3用法
 
-ul外面的div里如果不加col-xs-12，那h3和caption中间的间距会变,原因是加了之后有浮动元素会生成一个块级框BFC。不加撑不起来的原因是(margin-塌陷问题)[https://www.cnblogs.com/hugejinfan/p/5901320.html]
+ul外面的div里如果不加col-xs-12，那h3和caption中间的间距会变,原因是加了之后有浮动元素会生成一个块级框BFC。不加撑不起来的原因是[margin-塌陷问题](https://www.cnblogs.com/hugejinfan/p/5901320.html)
 1. 先嵌套塌陷：h3的margin-top的效果并不是h3相对div的间距，而是（h3和div一起）相对于thumbnail的间距，
 2. 再并列塌陷：thumbnail本身有一个margin-button,这个margin-button与margin-top再塌陷一次。
 
