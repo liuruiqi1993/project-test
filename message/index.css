@@ -370,7 +370,6 @@ li.active::before {
   /*第四列对话窗*/
 }
 .chat header {
-  min-width: 940px;
   padding: 0 30px;
   height: 80px;
   border-bottom: 1px solid #e6e9ec;
@@ -508,7 +507,6 @@ li.active::before {
 }
 .chat .open-chat {
   margin-left: 400px;
-  min-width: 540px;
   height: inherit;
 }
 .chat .open-chat .person {
