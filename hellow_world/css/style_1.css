@@ -22,6 +22,9 @@
         margin: 110px 0 0 0;
         background-color: #e7e7e7;
     }
+    a,button,input{
+        -webkit-tap-highlight-color:rgba(255,0,0,0);
+    }
     /*第一节 Hello World*/
     .header{
         height: 990px;
