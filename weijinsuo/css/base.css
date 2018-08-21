@@ -1,6 +1,5 @@
 @font-face {
     font-family: 'MiFie';
-
     src: url('../fonts/MiFie-Web-Font.eot');
     src: url('../fonts/MiFie-Web-Font.eot?#iefix') format('embedded-opentype'),
     url('../fonts/MiFie-Web-Font.woff') format('woff'),
@@ -15,7 +14,6 @@
     font-style: normal;
     font-weight: normal;
     line-height: 1;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
