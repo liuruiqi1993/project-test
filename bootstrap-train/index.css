@@ -1,0 +1,276 @@
+@media screen and (min-width: 992px) {
+  .main #header .intro {
+    text-align: right;
+  }
+  .main #portfolio ul {
+    max-width: 80%;
+  }
+  .main #contact #note p:last-child {
+    margin-top: 300px;
+  }
+  .scroll-top {
+    display: none;
+  }
+}
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  width: 100%;
+  font-size: 20px;
+}
+a,
+button,
+input {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+h3,
+#nav {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h3 {
+  font-size: 30px;
+}
+#header,
+#portfolio,
+#contact {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 50px 0;
+  color: #888;
+  text-align: center;
+  background-color: #eee;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 2px 1px;
+}
+hr {
+  margin: 40px auto 30px;
+  max-width: 512px;
+  width: 100%;
+  height: 5px;
+  background-color: #888;
+  text-align: center;
+  border: none;
+  overflow: visible;
+  display: inline-block;
+}
+hr::after {
+  content: "</>";
+  font-size: 2em;
+  position: relative;
+  top: -18px;
+  font-weight: 900;
+  padding: 0 10px;
+  background-color: #eee;
+  color: #888;
+}
+#banner {
+  height: 80px;
+  background-color: #722872;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #592059;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+#banner .container {
+  width: 95%;
+  max-width: 1024px;
+}
+#banner .container #brand {
+  height: 100%;
+  padding: 0;
+  float: left;
+}
+#banner .container #brand img {
+  display: block;
+  height: 50px;
+  margin: 15px 0;
+}
+#banner .container button {
+  margin: 23px 15px 23px 0;
+}
+#banner .container #nav {
+  background-color: #722872;
+}
+#banner .container #nav ul {
+  text-align: center;
+  padding: 20px 0;
+}
+#banner .container #nav ul li {
+  display: inline-block;
+  float: none;
+}
+#banner .container #nav ul li a {
+  background-color: transparent;
+  border-radius: 0;
+  color: #777;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+#banner .container #nav ul li a:hover {
+  color: #555;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+#banner .container #nav ul li.active a {
+  color: #555;
+  background-color: #e7e7e7;
+}
+#top {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+.main {
+  width: 100%;
+  background-color: #666;
+}
+.main #header {
+  color: #fff;
+  background-color: #aaa;
+  text-align: center;
+  padding: 50px 30px;
+}
+.main #header .row {
+  margin: 0 auto;
+}
+.main #header .row div {
+  margin: 0 auto 30px;
+  padding: 0;
+}
+.main #header .row div .intro {
+  max-width: 675px;
+}
+.main #header .row div .intro .light {
+  background-color: #fff;
+}
+.main #header .row div .intro .light::after {
+  color: #fff;
+  font-size: 28px;
+  background-color: #aaa;
+}
+.main #header .row div .intro .skills {
+  font-size: 23px;
+}
+.main #header img {
+  margin: 0 auto;
+  max-width: 250px;
+  width: 80%;
+}
+.main #portfolio ul {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0;
+  list-style: none;
+}
+.main #portfolio ul li {
+  padding: 20px;
+}
+.main #portfolio ul li img {
+  width: 100%;
+}
+.main #contact form {
+  text-align: left;
+  padding: 30px 10px;
+}
+.main #contact form div {
+  margin: 10px auto 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  width: 80%;
+}
+.main #contact form div input,
+.main #contact form div textarea {
+  background-color: transparent;
+  width: 100%;
+  font-size: 30px;
+  outline: none;
+  border: none;
+  resize: none;
+}
+.main #contact form div textarea {
+  height: 200px;
+}
+.main #contact form div:last-child {
+  border: none;
+}
+.main #contact form div label {
+  color: transparent;
+  position: relative;
+  top: 40px;
+}
+.main #contact #note {
+  text-align: left;
+  padding: 10px;
+}
+.main #contact #note p {
+  display: block;
+  margin: 30px auto 0;
+  width: 80%;
+}
+.scroll-top a {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: inline-block;
+  background-color: #722872;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border: 2px solid #fff;
+  line-height: 40px;
+  text-align: center;
+  z-index: 99999;
+}
+.scroll-top a:hover {
+  background-color: #aaa;
+  color: #722872;
+  border: 2px solid #722872;
+  transition: all 0.5s;
+}
+footer .share {
+  background-color: #aaa;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 30px;
+}
+footer .share h3 {
+  font-size: 24px;
+  margin: 60px 0 30px;
+}
+footer .share a {
+  color: #722872;
+}
+footer .share .social {
+  list-style: none;
+  max-width: 240px;
+  margin: 0 auto;
+  padding: 0;
+}
+footer .share .social li {
+  float: left;
+  width: 25%;
+}
+footer .share .social li a {
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border: 2px solid #fff;
+  line-height: 50px;
+  transition: all 1s;
+}
+footer .share .social li a:hover {
+  background-color: #fff;
+  color: #722872;
+  transition: all 1s;
+}
+footer .copyright {
+  background-color: #722872;
+  padding: 25px;
+  margin: 0;
+  color: #fff;
+}

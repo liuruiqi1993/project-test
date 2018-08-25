@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav id="banner" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <a id="brand" href="#top"><img src="img/qlip.png"></a>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="nav nav-pills navbar-right">
+                    <li role="presentation" class="active"><a class="scrollable" href="#top">Home</a></li>
+                    <li role="presentation"><a class="scrollable" href="#portfolio">Portfolio</a></li>
+                    <li role="presentation"><a class="scrollable" href="#contact">Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <a id="top"></a>
+    <div class="main">
+        <header id="header" class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="intro">
+                        <p>Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative direction; devoted to functional programming and information architecture.</p>
+                        <hr class="light">
+                        <p class="skills">Web Developer - User Experience Designer - Graphic Artist</p>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <img class="img-circle img-responsive" src="img/avatar.jpg">
+                </div>
+            </div>
+        </header>
+        <div id="portfolio">
+            <h3>portfolio</h3>
+            <hr>
+            <ul class="row">
+                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><img src="img/1.jpg" alt=""></li>
+                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><img src="img/2.jpg" alt=""></li>
+                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><img src="img/3.jpg" alt=""></li>
+                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><img src="img/4.jpg" alt=""></li>
+                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><img src="img/5.jpg" alt=""></li>
+                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><img src="img/6.jpg" alt=""></li>
+            </ul>
+        </div>
+        <div id="contact">
+            <h3>Contact Me</h3>
+            <hr>
+            <div class="row">
+                <form class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Name">
+                    </div>
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Email Address">
+                    </div>
+                    <div>
+                        <label for="tel">Phone Number</label>
+                        <input type="tel" id="tel" placeholder="Phone Number">
+                    </div>
+                    <div>
+                        <label for="massage">Message</label>
+                        <textarea id="massage" placeholder="Message"></textarea>
+                    </div>
+                    <div>
+                        <button>Send</button>
+                    </div>
+                </form>
+                <script>
+                    $("#contact").find("[placeholder]").map(function(){
+                        var that = this;
+                        $(that).bind('input propertychange', function() {
+                            if($(this).val()){
+                                //如果输入框不为空，label可见
+                                $(this).prev().css({"color":"#722872","position":"relative","top":"0","transition":"all .5s"});
+                                $(this).blur(function(){$(this).prev().css({"color":"#888"});});
+                                $(this).focus(function(){$(this).prev().css({"color":"#722872"});});
+                            }else{
+                                //如果输入框空，label不可见
+                                $(this).prev().css({"color":"transparent","position":"relative","top":"40px","transition":"all .5s"});
+                                $(this).bind('focus blur', function() {$(this).prev().css({"color":"transparent"})});
+                            }
+                        });
+                    });
+                </script>
+                <div id="note" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here in stunning Toronto... just feel free to drop me a line anytime.</p>
+                    <p>I promise to reply A.S.A.P.</p>
+                    <p>Note: No spam/soliciting pour moi, merci :)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-top"><a class="scrollable" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+    <script>
+        $(".scrollable").map(function(){
+            $(this).click(function(){
+                var thisId = $(this).attr("href");
+                $("html").stop().animate({
+                    "scrollTop": $(thisId).offset().top-30
+                } , 2000);
+                $("#nav [href='"+thisId+"']").parent("li").siblings().removeClass("active");
+                $("[href='"+thisId+"']").parent("li").addClass("active");
+            });
+            $("html").bind('scroll', function(){
+
+            });
+        });
+        $(".main").click(function() {
+            $("#banner .navbar-collapse").attr({
+                "class": "navbar-collapse collapse"
+            });
+        });
+    </script>
+    <footer>
+        <div class="share row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h3>About this page</h3>
+                <p>Made with <i class="fa fa-fw fa-coffee"></i> and <i class="fa fa-fw fa-music"></i><br>by <a href="http://qlip.in">Justin Sane</a>.</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h3>Around the Web</h3>
+                <ul class="social">
+                    <li><a href="https://www.linkedin.com/in/hallaathrad"><i class="fa fa-fw fa-lg fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/hallaathrad"><i class="fa fa-fw fa-lg fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/hallaathrad"><i class="fa fa-fw fa-lg fa-twitter"></i></a></li>
+                    <li><a href="https://www.flickr.com/photos/hallaathrad/" title="My Flickr"><i class="fa fa-fw fa-lg fa-flickr"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright text-center">qlip ©  2018. All Rights Reversed</p>
+    </footer>
+</body>
+</html>
