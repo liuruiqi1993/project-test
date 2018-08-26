@@ -128,8 +128,8 @@
                 $("#nav [href='"+thisId+"']").parent("li").siblings().removeClass("active");
                 $("[href='"+thisId+"']").parent("li").addClass("active");
             };
-            $(this).bind("click",clickNav);
             $(this).bind("touchstart",clickNav);
+//            $(this).bind("click",clickNav);
 
         });
 
@@ -143,7 +143,7 @@
                 }
             });
         };
-        $(document).bind('scroll', scrollMain);
+//        $(document).bind('scroll', scrollMain);
 
 //点击导航栏以外的区域，导航栏收起
         $(".main").click(function() {
