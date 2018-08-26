@@ -115,24 +115,34 @@
     </div>
     <div class="scroll-top"><a class="scrollable" href="#top"><i class="fa fa-chevron-up"></i></a></div>
     <script>
+        var arr = [];
         $(".scrollable").map(function(){
+            var thisId = $(this).attr("href");
+            var item = $(thisId).offset().top;
+            arr.push(item);
             $(this).click(function(){
-                var thisId = $(this).attr("href");
                 $("html").stop().animate({
                     "scrollTop": $(thisId).offset().top-30
                 } , 2000);
                 $("#nav [href='"+thisId+"']").parent("li").siblings().removeClass("active");
                 $("[href='"+thisId+"']").parent("li").addClass("active");
             });
-            $("html").bind('scroll', function(){
-
-            });
+        });
+        arr = arr.splice(0, arr.length - 1);
+        $(document).bind('scroll', function(){
+                arr.map(function(a,index){
+                    if(a-100<$("html").scrollTop()){
+                        $("#nav li").siblings().removeClass("active");
+                        $("#nav li").eq(index).addClass("active");
+                    }
+                });
         });
         $(".main").click(function() {
             $("#banner .navbar-collapse").attr({
                 "class": "navbar-collapse collapse"
             });
         });
+
     </script>
     <footer>
         <div class="share row">
