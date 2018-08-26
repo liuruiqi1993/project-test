@@ -122,7 +122,7 @@
             var thisId = $(this).attr("href");
             var item = $(thisId).offset().top;
             arr.push(item);
-            $(this).bind("click touchstart", function(){
+            $(this).bind("click touchend", function(){
                 $("html").stop().animate({
                     "scrollTop": $(thisId).offset().top-30
                 } , 1000);
