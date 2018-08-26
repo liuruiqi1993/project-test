@@ -252,8 +252,7 @@ footer .share .social li {
   float: left;
   width: 25%;
 }
-footer .share .social li a:link,
-footer .share .social li a:visited {
+footer .share .social li a {
   display: inline-block;
   border-radius: 50%;
   width: 50px;
@@ -263,8 +262,7 @@ footer .share .social li a:visited {
   line-height: 50px;
   transition: all 0.5s;
 }
-footer .share .social li a:link:hover,
-footer .share .social li a:visited:hover {
+footer .share .social li a:hover {
   background-color: #fff;
   color: #722872;
   transition: all 0.5s;
