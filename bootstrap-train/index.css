@@ -12,13 +12,11 @@
     display: none;
   }
 }
-html {
-  width: 100%;
-  overflow-x: hidden;
-}
+html,
 body {
   width: 100%;
   font-size: 20px;
+  overflow-x: hidden;
 }
 a,
 button,
