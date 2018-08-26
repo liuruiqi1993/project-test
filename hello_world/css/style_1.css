@@ -1,0 +1,484 @@
+    body,h1,h3,h6,ul,li,p,a{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font:400 12px/100% "Montserrat", sans-serif;
+    }
+    .white{
+        color: #fff;
+    }
+    .grey{
+        color: #84827f;
+    }
+    body{
+        width: 1600px;
+        margin: 0 auto;
+    }
+    hr{
+        height: 1px;
+        border: none;
+        width: 1600px;
+        margin: 110px 0 0 0;
+        background-color: #e7e7e7;
+    }
+    a,button,input{
+        -webkit-tap-highlight-color:rgba(255,0,0,0);
+    }
+    /*第一节 Hello World*/
+    .header{
+        height: 990px;
+        position: relative;
+    }
+    .bg1{
+        height: 990px;
+        filter: brightness(40%);
+        background: url(../img/bg1.png) 0 0 no-repeat;
+    }
+    .hello{
+        top:0;
+        left: 0;
+        height: 990px;
+        width: 1600px;
+        position: absolute;
+        text-align: center;
+    }
+    .hello h1{
+        margin-top: 200px;
+        font:200 62px/100% "Montserrat", sans-serif;
+    }
+    .hello h3{
+        margin-top: 70px;
+        font:200 20px/160% "Montserrat", sans-serif;
+    }
+    .account{
+        width: 768px;
+        height: 248px;
+        padding: 0 100px;
+        border-radius: 5px;
+        margin: 100px auto 0;
+        border: 1px solid #84827f;
+    }
+    .account h6{
+        margin-top: 60px;
+        font:200 16px/100% "Montserrat", sans-serif;
+    }
+    .account p{
+        margin-top: 20px;
+    }
+    .account input{
+        float: left;
+        height: 48px;
+        width: 273px;
+        outline:none;
+        padding: 0 15px;
+        background: none;
+        border-radius: 5px;
+        margin: 45px 30px 0 0;
+        border: 1px solid #84827f;
+    }
+    .account input::-webkit-input-placeholder {
+        color: #84827f;
+    }
+    .account input:-moz-placeholder {
+        color: #84827f;
+    }
+    .account input::-moz-placeholder {
+        color: #84827f;
+    }
+    .account input:-ms-input-placeholder {
+        color: #84827f;
+    }
+    .account button{
+        width: 95px;
+        height: 50px;
+        outline:none;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 45px 0 0 0;
+        background-color: #fff;
+    }
+
+
+    /*第二节 Ready-made*/
+    .ready>p{
+        margin-top: 90px;
+        text-align: center;
+        font:200 14px/100% "Montserrat", sans-serif;
+    }
+    .ready h3{
+        margin: 30px 0 5px;
+        text-align: center;
+        font:200 42px/120% "Montserrat", sans-serif;
+    }
+    .items{
+        display: flex;
+        width: 1170px;
+        margin:0 auto;
+        justify-content: space-between;
+    }
+    .items div{
+        width: 370px;
+        position: relative;
+        padding: 70px  70px 0 130px;
+    }
+    .items h6{
+        font:400 20px/120% "Montserrat", sans-serif;
+        margin-bottom: 20px;
+    }
+    .items p{
+        color: #84827f;
+        font:200 16px/160% "Montserrat", sans-serif;
+    }
+    .items i{
+        top: 80px;
+        left: 60px;
+        width: 55px;
+        height: 55px;
+        position: absolute;
+    }
+    .items1{
+        background: url(../img/icon.png) 1px -1px no-repeat;
+    }
+    .items2{
+        background: url(../img/icon.png) -57px -1px no-repeat;
+    }
+    .items3{
+        background: url(../img/icon.png) 1px -57px no-repeat;
+    }
+    .items4{
+        background: url(../img/icon.png) -57px -57px no-repeat;
+    }
+
+
+    /*第三节 Supportive policies*/
+    .bg{
+        position: relative;
+    }
+    .bg2{
+        height: 800px;
+        filter: brightness(90%);
+        background: url(../img/bg2.png) 0 0 no-repeat;
+    }
+    .info{
+        top: 170px;
+        left: 320px;
+        width: 400px;
+        height: 440px;
+        position: absolute;
+    }
+    .info h3{
+        font:200 42px/120% "Montserrat", sans-serif;
+    }
+    .info p{
+        margin-top: 35px;
+        font:200 18px/160% "Montserrat", sans-serif;
+    }
+    .more{
+        width: 600px;
+    }
+    .info a{
+        color: #fff;
+        float: left;
+        width: 240px;
+        height: 60px;
+        border-radius: 5px;
+        text-align: center;
+        margin: 50px 30px 0 0;
+        display: inline-block;
+        border: 1px solid #84827f;
+        font:200 12px/60px "Montserrat", sans-serif;
+    }
+    a.check{
+        color: #000;
+        background-color: #fff;
+        border: 1px solid #fff;
+    }
+    .ipad{
+        right: 0;
+        top:50%;
+        width: 644px;
+        height: 588px;
+        overflow: hidden;
+        position: absolute;
+        border-radius: 20px 0 0 20px;
+        border: 1px solid #84827f;
+        border-right: none;
+        margin-top: -300px;
+    }
+    .ipad i{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+        border: 1px solid #84827f;
+        position: absolute;
+        right: 615px;
+        top:50%;
+        margin:-5px -5px 0 0;
+
+    }
+    .ipad img{
+        border: 1px solid #84827f;
+        margin: 25px 0 25px 50px;
+    }
+
+    /*第四节 Try Our Awesome Products*/
+    .product{
+        text-align: center;
+    }
+    .product h3{
+        margin-top: 90px;
+        font:200 42px/100% "Montserrat", sans-serif;
+    }
+    .product div{
+        width: 1170px;
+        margin: 0 auto -30px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .product p{
+        padding-top: 160px;
+        width: 280px;
+        font:200 16px/160% "Montserrat", sans-serif;
+    }
+    .product div p:nth-child(1){
+        background: url(../img/l1.png) center 90px no-repeat;
+    }
+    .product div p:nth-child(2){
+        background: url(../img/l2.png) center 90px no-repeat;
+    }
+    .product div p:nth-child(3){
+        background: url(../img/l3.png) center 90px no-repeat;
+    }
+
+
+    /*第五节 Learn How to Improve*/
+    .chart{
+        width: 970px;
+        margin: 110px auto -80px;
+    }
+    .chart .left{
+        height: 430px;
+        padding-left: 670px;
+        background: url(../img/ins1.png) left 5px no-repeat;
+    }
+    .chart .right{
+        height: 430px;
+        background: url(../img/ins2.png) right 5px no-repeat;
+    }
+    .chart h6{
+        width: 330px;
+        padding-top: 70px;
+        font:200 20px/160% "Montserrat", sans-serif;
+    }
+    .chart p{
+        width: 330px;
+        padding-top: 30px;
+        font:200 16px/160% "Montserrat", sans-serif;
+    }
+
+
+    /*第六节 Our Awesome Crew*/
+    .crew{
+        width: 970px;
+        text-align: center;
+        margin: 0 auto -40px;
+    }
+    .crew h3{
+        margin: 90px 0 30px;
+        font:200 42px/100% "Montserrat", sans-serif;
+    }
+    .crew p{
+        margin-bottom: 60px;
+        font:200 16px/160% "Montserrat", sans-serif;
+    }
+    .crew>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    .crew>div>div{
+        position: relative;
+    }
+    .crew img{
+        width: 470px;
+        height: 340px;
+        cursor: pointer;
+        display: block;
+        margin-bottom: 30px;
+    }
+    .current{
+        top: 0;
+        left: 0;
+        display: none;
+        width: 470px;
+        height: 340px;
+        cursor: pointer;
+        color: #fff;
+        position: absolute;
+        text-align: center;
+        background-color: rgba(0,0,0,0.7);
+    }
+    .current .name{
+        margin:100px auto 0;
+        font:200 20px/100% "Montserrat", sans-serif;
+    }
+    .current .title{
+        margin:20px 0 40px;
+        font:200 12px/100% "Montserrat", sans-serif;
+    }
+    .follow {
+        width: 210px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .follow i{
+        width:50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        line-height: 50px;
+        border: 1px solid #84827f;
+    }
+    /*hover效果*/
+    .crew img:hover + .current{
+        display: block;
+    }
+    .current:hover{
+        display: block;
+    }
+
+
+    /*第七节 Contacts*/
+    .contacts{
+        margin-bottom: -10px;
+        position: relative;
+    }
+    .contacts form{
+        width: 370px;
+        height: 460px;
+        padding: 50px;
+        text-align: center;
+        border-radius: 5px;
+        display: inline-block;
+        border: 1px solid #e7e7e7;
+        margin: 80px 0 -30px 315px;
+    }
+    .contacts form p{
+        margin-bottom: 40px;
+        font:200 16px/100% "Montserrat", sans-serif;
+    }
+    .contacts form input{
+        width: 338px;
+        height: 18px;
+        padding: 15px;
+        outline: none;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        border: 1px solid #e7e7e7;
+    }
+    .contacts form textarea {
+        width: 338px;
+        font-family:"Montserrat", sans-serif;
+        resize: none;
+        outline: none;
+        height: 113px;
+        padding: 15px;
+        overflow-y:hidden;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        border: 1px solid #e7e7e7;
+    }
+    .contacts form input[type="button"]{
+        width: 370px;
+        height: 50px;
+        color: #fff;
+        cursor: pointer;
+        background-color: #000;
+        border: 1px solid #000;
+    }
+    .contacts div{
+        top: 140px;
+        left: 915px;
+        width: 370px;
+        height: 380px;
+        position: absolute;
+    }
+    .contacts div h3{
+        margin-bottom: 30px;
+        font:200 42px/100% "Montserrat", sans-serif;
+    }
+    .contacts div p{
+        margin-bottom: 70px;
+        font:200 16px/160% "Montserrat", sans-serif;
+    }
+    .contacts li{
+        margin-bottom: 30px;
+        padding-left: 40px;
+        position: relative;
+        font:200 16px/160% "Montserrat", sans-serif;
+    }
+    .contacts li i{
+        top:5px;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+    }
+    .contacts li a{
+        color: #000;
+        font:200 16px/160% "Montserrat", sans-serif;
+    }
+    .contacts div ul li:nth-child(1) i{
+        background: url(../img/icon.png) -112px -1px no-repeat;
+    }
+    .contacts div ul li:nth-child(2) i{
+        background: url(../img/icon.png) -112px -29px no-repeat;
+    }
+    .contacts div ul li:nth-child(3) i{
+        background: url(../img/icon.png) -112px -58px no-repeat;
+    }
+
+
+    /*第八节footer*/
+    .footer{
+        height: 260px;
+        background-color: #000;
+        padding: 90px 215px 60px;
+    }
+    .footer>div{
+        width: 300px;
+        display: inline-block;
+        float: left;
+    }
+    .footer h6{
+        color: #fff;
+        margin-bottom: 30px;
+        font:200 14px/100% "Montserrat", sans-serif;
+    }
+    .footer li{
+        margin-bottom: 30px;
+    }
+    .footer a{
+        color: #84827f;
+        font:200 16px/100% "Montserrat", sans-serif;
+    }
+    div.addition{
+        width: 250px;
+    }
+    .addition li{
+        color: #84827f;
+        font:200 16px/160% "Montserrat", sans-serif;
+    }
+    li.icon{
+        width: 300px;
+    }
+    .addition a{
+        margin: 0 25px 0 0;
+    }
+    .addition i{
+        height: 20px;
+        display: inline-block;
+    }
