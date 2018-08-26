@@ -259,12 +259,12 @@ footer .share .social li a {
   color: #fff;
   border: 2px solid #fff;
   line-height: 50px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 footer .share .social li a:hover {
   background-color: #fff;
   color: #722872;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 footer .copyright {
   background-color: #722872;
