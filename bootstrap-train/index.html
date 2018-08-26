@@ -11,7 +11,7 @@
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body ontouchstart>
     <nav id="banner" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <a id="brand" href="#top"><img src="img/qlip.png"></a>
@@ -115,6 +115,10 @@
     </div>
     <div class="scroll-top"><a class="scrollable" href="#top"><i class="fa fa-chevron-up"></i></a></div>
     <script>
+//判断屏幕宽度小于880让元素去除绑定的hover事件
+        if($(window).width()<=880){
+            $(".scrollable").unbind('mouseenter').unbind('mouseleave');
+        }
         var arr = [];
 //        点击导航栏，滚动到内容
         $(".scrollable").map(function(){
@@ -128,8 +132,8 @@
                 $("#nav [href='"+thisId+"']").parent("li").siblings().removeClass("active");
                 $("[href='"+thisId+"']").parent("li").addClass("active");
             };
-            $(this).bind("touchstart",clickNav);
-//            $(this).bind("click",clickNav);
+//            $(this).bind("touchstart",clickNav);
+            $(this).bind("click",clickNav);
 
         });
 
