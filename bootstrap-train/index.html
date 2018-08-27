@@ -122,12 +122,11 @@
         $(".scrollable").map(function(){
             var thisId = $(this).attr("href");
             var clickNav = function(){
-                $("html").stop().animate({
+                $("html, body").stop().animate({
                     "scrollTop": Math.floor($(thisId).offset().top)
                 } , 1500);
             };
             $(this).bind("click",clickNav);
-//            $(this).bind("touchstart",clickNav);
         });
 
 //滚动到内容，导航变化
