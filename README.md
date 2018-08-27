@@ -8,22 +8,22 @@
 2. JS
 
 [分页组件](https://liuruiqi1993.github.io/project-test/switch-pages/test.html)  
-![](https://github.com/liuruiqi1993/project-test/switch-pages/switch-page.gif)  
+![](https://github.com/liuruiqi1993/project-test/blob/master/switch-pages/switch-page.gif)  
   
 [点击切换图片](https://liuruiqi1993.github.io/project-test/switch-figures/1st/index.html)  
-![](https://github.com/liuruiqi1993/project-test/switch-figures/1st/images/switch1st.gif)  
+![](https://github.com/liuruiqi1993/project-test/blob/master/switch-figures/1st/images/switch1st.gif)  
   
 [轮播图](https://liuruiqi1993.github.io/project-test/switch-figures/2nd/index.html)  
-![](https://github.com/liuruiqi1993/project-test/switch-figures/2nd/images/switch2nd.gif)  
+![](https://github.com/liuruiqi1993/project-test/blob/master/switch-figures/2nd/images/switch2nd.gif)  
   
 [动画](https://liuruiqi1993.github.io/project-test/say-cheese/index.html)  
-![](https://github.com/liuruiqi1993/project-test/say-cheese/say-cheese.gif)  
+![](https://github.com/liuruiqi1993/project-test/blob/master/say-cheese/say-cheese.gif)  
   
 [增删改](https://liuruiqi1993.github.io/project-test/song/index.html)  
-![](https://github.com/liuruiqi1993/project-test/song/song.gif)  
+![](https://github.com/liuruiqi1993/project-test/blob/master/song/song.gif)  
   
 [tab切换](https://liuruiqi1993.github.io/project-test/switch-tab/index.html)  
-![](https://github.com/liuruiqi1993/project-test/switch-tab/switch.html)
+![](https://github.com/liuruiqi1993/project-test/blob/master/switch-tab/switch.html)
 
 3. JQ  
 [momo](https://liuruiqi1993.github.io/project-test/momo-copy/index.html) 视频声音被我关了  
@@ -32,11 +32,11 @@ jd移动版 [第一页](https://github.com/liuruiqi1993/project-test/tree/master
 
 4. ajax
 
-[异步加载](https://liuruiqi1993.github.io/project-test/get_more/ajax.html)  
-![](https://github.com/liuruiqi1993/project-test/get_more/images/get-more.gif)  
+[异步加载](https://github.com/liuruiqi1993/project-test/tree/master/get_more)  
+![](https://github.com/liuruiqi1993/project-test/blob/master/get_more/images/get-more.gif)  
   
-[瀑布流](https://liuruiqi1993.github.io/project-test/water_fall/ajax.html)  
-![](https://github.com/liuruiqi1993/project-test/water_fall/images/water-fall.gif)
+[瀑布流](https://github.com/liuruiqi1993/project-test/tree/master/water_fall)  
+![](https://github.com/liuruiqi1993/project-test/blob/master/water_fall/images/water-fall.gif)
 
 5. bootstrap  
 [微金所](https://liuruiqi1993.github.io/project-test/weijinsuo/index.html)  
