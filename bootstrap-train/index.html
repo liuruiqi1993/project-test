@@ -122,8 +122,8 @@
         $(".scrollable").map(function(){
             var thisId = $(this).attr("href");
             var clickNav = function(){
-                //仅仅写html,手机上滚不动
-                $("body").stop().animate({
+                //仅仅写html,手机上滚不动,body滚的动
+                $(".main").stop().animate({
                     "scrollTop": Math.floor($(thisId).offset().top)
                 } , 1500);
             };
