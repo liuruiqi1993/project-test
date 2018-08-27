@@ -88,23 +88,6 @@
                         <button>Send</button>
                     </div>
                 </form>
-                <script>
-                    $("#contact").find("[placeholder]").map(function(){
-                        var that = this;
-                        $(that).bind('input propertychange', function() {
-                            if($(this).val()){
-                                //如果输入框不为空，label可见
-                                $(this).prev().css({"color":"#722872","position":"relative","top":"0","transition":"all .5s"});
-                                $(this).blur(function(){$(this).prev().css({"color":"#888"});});
-                                $(this).focus(function(){$(this).prev().css({"color":"#722872"});});
-                            }else{
-                                //如果输入框空，label不可见
-                                $(this).prev().css({"color":"transparent","position":"relative","top":"40px","transition":"all .5s"});
-                                $(this).bind('focus blur', function() {$(this).prev().css({"color":"transparent"})});
-                            }
-                        });
-                    });
-                </script>
                 <div id="note" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here in stunning Toronto... just feel free to drop me a line anytime.</p>
                     <p>I promise to reply A.S.A.P.</p>
@@ -113,53 +96,51 @@
             </div>
         </div>
     </div>
-    <div class="scroll-top"><a class="scrollable" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+    <div class="scroll-top">
+        <a class="scrollable" href="#top"><i class="fa fa-chevron-up"></i></a>
+    </div>
     <script>
-//判断屏幕宽度小于880让元素去除绑定的hover事件
-//        if($(window).width()<=880){
-//            $(".scrollable").unbind('mouseenter').unbind('mouseleave');
-//        }
-
-
-        var arr = [];
-//        点击导航栏，滚动到内容
+//表单输入效果
+        $("#contact").find("[placeholder]").map(function(){
+            var that = this;
+            $(that).bind('input propertychange', function() {
+                if($(this).val()){
+                    //如果输入框不为空，label可见
+                    $(this).prev().css({"color":"#722872","position":"relative","top":"0","transition":"all .5s"});
+                    $(this).blur(function(){$(this).prev().css({"color":"#888"});});
+                    $(this).focus(function(){$(this).prev().css({"color":"#722872"});});
+                }else{
+                    //如果输入框空，label不可见
+                    $(this).prev().css({"color":"transparent","position":"relative","top":"40px","transition":"all .5s"});
+                    $(this).bind('focus blur', function() {$(this).prev().css({"color":"transparent"})});
+                }
+            });
+        });
+    </script>
+    <script>
+//点击导航栏，滚动到内容
         $(".scrollable").map(function(){
             var thisId = $(this).attr("href");
-            var item = $(thisId).offset().top;
-            arr.push(item);
             var clickNav = function(){
-                $("#nav [href='"+thisId+"']").parent("li").addClass("active").siblings().removeClass("active");
                 $("html").stop().animate({
-                    "scrollTop": $(thisId).offset().top-30
-                } , 1500);
-                $("window").stop().animate({
-                    "pageYOffset": $(thisId).offset().top-30
+                    "scrollTop": Math.floor($(thisId).offset().top)
                 } , 1500);
             };
             $(this).bind("click",clickNav);
-            $(this).bind("touchstart",clickNav);
+//            $(this).bind("touchstart",clickNav);
         });
 
-//        滚动到内容，导航变化
-        arr = arr.splice(0, arr.length - 1);
-        var scrollMain = function(){
-            arr.map(function(a,index){
-                if(a<$("html").scrollTop()){
-                    $("#nav li").siblings().removeClass("active");
-                    $("#nav li").eq(index).addClass("active");
-                }
-            });
-        };
-//        $(document).bind('scroll', scrollMain);
+//滚动到内容，导航变化
+        $('body').scrollspy({ target: '.navbar-default' });
 
 //点击导航栏以外的区域，导航栏收起
         $(".main").click(function() {
-            $("#banner .navbar-collapse").attr({
-                "class": "navbar-collapse collapse"
-            });
+            $(".navbar-collapse").collapse('hide');
         });
-
-
+//选完内容，导航栏收起
+        $(".scrollable").click(function() {
+            $(".navbar-collapse").collapse('hide');
+        });
     </script>
     <footer>
         <div class="share row">
