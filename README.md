@@ -23,7 +23,7 @@
 ![](https://github.com/liuruiqi1993/project-test/blob/master/song/song.gif)  
   
 [tab切换](https://liuruiqi1993.github.io/project-test/switch-tab/index.html)  
-![](https://github.com/liuruiqi1993/project-test/blob/master/switch-tab/switch.png)
+![](https://github.com/liuruiqi1993/project-test/blob/master/switch-tab/imgs/switch.png)
 
 3. JQ  
 [momo](https://liuruiqi1993.github.io/project-test/momo-copy/index.html) 视频声音被我关了  
