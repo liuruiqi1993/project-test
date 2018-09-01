@@ -31,8 +31,9 @@ jd移动版 [第一页](https://github.com/liuruiqi1993/project-test/tree/master
 
 
 4. ajax
+[异步加载获取新格言](https://liuruiqi1993.github.io/project-test/motto/index.html)
 
-[异步加载](https://github.com/liuruiqi1993/project-test/tree/master/get_more)  
+[获取图片](https://github.com/liuruiqi1993/project-test/tree/master/get_more)  
 ![](https://github.com/liuruiqi1993/project-test/blob/master/get_more/images/get-more.gif)  
   
 [瀑布流](https://github.com/liuruiqi1993/project-test/tree/master/water_fall)  
