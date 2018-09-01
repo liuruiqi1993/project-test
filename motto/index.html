@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500">
+</head>
+<style type="text/css">
+	html,body{
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		font-family: Raleway;
+	}
+	.clearfix:after{
+		content: "";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	.container{
+		background-color: #FFFFFF;
+		width: 550px;
+		margin: 80px auto 10px;
+		padding: 40px 50px;
+		border-radius: 5px;
+	}
+	.quote{
+		font-size: 28px;
+	}
+	.writer{
+		float: right;
+		font-size: 16px;
+		margin: 20px 0;
+	}
+	.share{
+		vertical-align: top;
+		width: 100%;
+	}
+	.button{
+		display: inline-block;
+		float: left;
+		font-size: 38px;
+		line-height: 38px;
+		color: #FFFFFF;
+		margin-right: 5px;
+	}
+	.update{
+		outline: none;
+		float: right;
+		font-size: 14px;
+		line-height: 36px;
+		border-radius: 5px;
+		color: #FFFFFF;
+		border: none;
+		padding: 0 10px;
+	}
+	footer{
+		color: #FFFFFF;
+		margin: 0 auto;
+		font-size: 12px;
+	}
+	footer a{
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+</style>
+<body>
+<div class="container">
+	<div class="quote clearfix">
+		<div class="text"><i class="fa fa-quote-left"> </i> <span id="motto"></span></div>
+		<div class="writer">- <span id="author"></span></div>
+	</div>
+	<div class="share clearfix">
+		<a class="button" id="tweet-quote" target="_blank">
+			<i class="fab fa-twitter-square"></i>
+		</a>
+		<a class="button" id="tumblr-quote" target="_blank">
+			<i class="fab fa-tumblr-square"></i>
+		</a>
+		<button class="update" id="submit" onclick="getQuote()">NEW</button>
+	</div>
+</div>
+<footer>
+	<p>by <a href="https://codepen.io/hezag/">gnuns</a></p>
+	<p>copied by me</p>
+</footer>
+<script>
+	var colors = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"];
+	var body = document.getElementsByTagName("body")[0];
+	var quote = document.getElementsByClassName("quote")[0];
+	var buttons = document.getElementsByClassName("button");
+	var submit = document.getElementById("submit");
+	var motto = document.getElementById("motto");
+	var author = document.getElementById("author");
+	getQuote();
+//  注册事件
+	function getQuote(){
+		var index=Math.floor(Math.random()*colors.length);
+		var color=colors[index];
+		body.style.backgroundColor=color;
+		submit.style.backgroundColor=color;
+		quote.style.color=color;
+		buttons = Array.prototype.slice.apply(buttons);
+		buttons.map(function(a){
+			a.style.color=color;
+		});
+//	    创建对象
+		var xmlhttp=new XMLHttpRequest();
+//		规定请求的类型、URL 以及是否异步处理请求。
+		xmlhttp.open("GET","https://andruxnet-random-famous-quotes.p.mashape.com/cat=",true);
+//		添加请求头 X-Mashape-Key为密钥，不加报错401未授权拒绝访问
+		xmlhttp.setRequestHeader("X-Mashape-Key", "OivH71yd3tmshl9YKzFH7BTzBVRQp1RaKLajsnafgL2aPsfP9V");
+//		告诉服务器请求的主题内容是json格式的字符串，服务器端会对json字符串进行解析
+		xmlhttp.setRequestHeader("Accept", "application/json");
+//		发送请求
+		xmlhttp.send();
+//      存储函数，每当 readyState 属性改变时，就会调用该函数
+		xmlhttp.onreadystatechange=function(){
+//			4：请求已完成，且响应已就绪 && 200: "OK"
+			if (xmlhttp.readyState==4 && xmlhttp.status==200){
+//				请求成功，执行自定义函数 JSON.parse()将一个 JSON 字符串转换为对象
+				var result = JSON.parse(xmlhttp.responseText)[0];
+				motto.innerText=result.quote;
+				author.innerText=result.author;
+			}
+		}
+	}
+</script>
+</body>
+</html>
