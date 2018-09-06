@@ -26,6 +26,25 @@ html, body{
   color: #585d68;
 
 }
+
+// 滚动条
+.scrollbar{
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16px;
+  border-radius: 8px;
+  background-color: rgba(120,120,120,0.5);
+  .bar{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.6);
+  }
+}
+
+
 //去除手机选中链接后的蓝色背景
 a,button,input{
   -webkit-tap-highlight-color:rgba(255,0,0,0);
@@ -225,15 +244,16 @@ li.active::before{
     width: @primary-width;
     height: 100%;
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     /*第一列顶部*/
     .app-items{
       width: 100%;
       height: 100%;
-      margin-bottom: 60px;
-      overflow: hidden;
+      margin-bottom: 80px;
       ul{
+        float: left;
         padding: 0;
+        margin: 0;
         width: 100%;
         height: 100%;
         list-style: none;
@@ -255,6 +275,7 @@ li.active::before{
     }
     /*第一列底部*/
     .button-action{
+      background-color: #1d2531;
       width: 100%;
       height: 80px;
       position: absolute;
@@ -286,74 +307,72 @@ li.active::before{
   /*第二列*/
   .secondary{
     margin-left: @primary-width;
-    background-color: #222c3c;
     width: @secondary_width;
     height: 100%;
-    padding: 5px 0 60px;
-    overflow: hidden;
     position: relative;
-    /*第二列三个列表*/
-    .menu-items{
+    padding-bottom: 80px;
+    .menu-group{
+      height: 100%;
       width: 100%;
-      h6{
-        padding: 0 30px;
-        margin: 30px 0 20px;
-        color: @small-heading;
-        height: @icon;
+      background-color: #222c3c;
+      padding-top: 5px;
+      /*第二列三个列表*/
+      .menu-items{
         width: 100%;
-        position: relative;
-        font-size: 12px;
-        line-height: @icon;
-        a{
-          position: absolute;
-          top: -3px;
-          right: 30px;
-          height: @icon;
-          width: @icon;
-        }
-      }
-      ul{
-        width: 100%;
-        list-style: none;
-        padding: 0 0 20px 0;
-        margin: 0;
-        li{
+        h6{
           padding: 0 30px;
-          position: relative;
+          margin: 30px 0 20px;
+          color: @small-heading;
+          height: @icon;
           width: 100%;
-          height: 40px;
-          line-height: 20px;
+          position: relative;
+          font-size: 12px;
+          line-height: @icon;
           a{
-            display: block;
-            padding: 10px 0;
-            width: 100%;
-            height: 100%;
-            color: #b7c0cd;
-            text-decoration: none;
+            position: absolute;
+            top: -3px;
+            right: 30px;
+            height: @icon;
+            width: @icon;
+          }
+        }
+        ul{
+          width: 100%;
+          list-style: none;
+          padding: 0 0 20px 0;
+          margin: 0;
+          li{
+            padding: 0 30px;
             position: relative;
-            /*i{
-              //width: @icon;
-              &.num{
-                width: auto;
+            width: 100%;
+            height: 40px;
+            line-height: 20px;
+            a{
+              display: block;
+              padding: 10px 0;
+              width: 100%;
+              height: 100%;
+              color: #b7c0cd;
+              text-decoration: none;
+              position: relative;
+              &:hover{
+                font-weight: 600;
+                color: #fff;
               }
-            }*/
-            &:hover{
+            }
+            &.active a{
               font-weight: 600;
               color: #fff;
             }
           }
-          &.active a{
-            font-weight: 600;
-            color: #fff;
-          }
         }
       }
-    }
-    hr{
-      display: block;
-      margin: 0 30px;
-      padding: 0;
-      border-top: 1px solid @small-heading;
+      hr{
+        display: block;
+        margin: 0 30px;
+        padding: 0;
+        border-top: 1px solid @small-heading;
+      }
     }
     /*第二列底部*/
     .monthly-goal{
@@ -375,7 +394,6 @@ li.active::before{
         width: 100%;
         height: 5px;
         border-radius: 5px;
-        overflow: hidden;
         background-color: @small-heading;
         span{
           display: block;
@@ -408,8 +426,6 @@ li.active::before{
       width: 230px;
       height: @massage-hight;;
       position: relative;
-      //right: 0;
-      //top: 0;
       float: right;
       padding: 15px 30px 15px 70px;
       & > a{
@@ -448,256 +464,260 @@ li.active::before{
       }
     }
   }
-  /*第三列*/
-  .more-chats{
-    float: left;
-    width: 400px;
-    height: inherit;
-    border-right: @border;
-    margin-bottom: 80px;
-    /*第三列搜索框*/
-    .search{
-      padding: 20px 30px;
-      height: 70px;
-      position: relative;
-      border-bottom: @border;
-      input{
-        outline: none;
-        border-radius: 5px;
-        width: 100%;
-        height: 100%;
-        line-height: 100%;
-        padding-left: 15px;
-        border: @border;
-      }
-      .icon{
-        position: absolute;
-        top: 25px;
-        right: 40px;
-        height: @icon;
-        width: @icon;
-      }
-    }
-    /*第三列动态框*/
-    .news-group{
-      padding-bottom: 150px;
+  .main{
+    height: 100%;
+    padding-bottom: 80px;
+    /*第三列*/
+    .more-chats{
+      float: left;
       height: 100%;
-      .news{
-        width: 100%;
-        height: 130px;
-        padding: 0 20px 0 30px;
+      width: 400px;
+      padding-bottom: 70px;
+      border-right: @border;
+      /*第三列搜索框*/
+      .search{
+        padding: 20px 30px;
+        height: 70px;
+        position: relative;
         border-bottom: @border;
-        overflow: hidden;
-        /*第三列动态框个人信息*/
-        .profile{
+        input{
+          outline: none;
+          border-radius: 5px;
           width: 100%;
-          height: @massage-hight;
-          padding: 15px 70px;
-          position: relative;
-          & > a{
-            text-decoration: none;
-            position: absolute;
-            &.photo{
-              left: 0;
+          height: 100%;
+          line-height: 100%;
+          padding-left: 15px;
+          border: @border;
+        }
+        .icon{
+          position: absolute;
+          top: 25px;
+          right: 40px;
+          height: @icon;
+          width: @icon;
+        }
+      }
+      /*第三列动态框*/
+      .news-group{
+        float: left;
+        height: 100%;
+        .news{
+          width: 100%;
+          height: 130px;
+          padding: 0 20px 0 30px;
+          border-bottom: @border;
+
+          /*第三列动态框个人信息*/
+          .profile{
+            width: 100%;
+            height: @massage-hight;
+            padding: 15px 70px;
+            position: relative;
+            & > a{
+              text-decoration: none;
+              position: absolute;
+              &.photo{
+                left: 0;
+              }
+              &.date{
+                right: 0;
+                top: 20px;
+                color:@time;
+              }
             }
-            &.date{
-              right: 0;
-              top: 20px;
-              color:@time;
+            p{
+              margin: 5px 0 0;
+              &.title a{
+                color: @gray;
+              }
             }
           }
-          p{
-            margin: 5px 0 0;
-            &.title a{
-              color: @gray;
+          &.active{
+            border-left: 3px solid @blue;
+            .profile{
+              p{
+                &.name a{
+                  color: @blue;
+                  &::before{
+                    content: "● ";
+                  }
+                }
+              }
+            }
+          }
+          .share{
+            span{
+              display: block;
+              width: auto;
+              height: 40px;
+              float: right;
+              padding: 10px 0 10px 10px;
             }
           }
         }
-        &.active{
-          border-left: 3px solid @blue;
-          .profile{
+      }
+    }
+    /*第四列对话窗*/
+    .open-chat{
+      height: 100%;
+      padding-bottom: 160px;
+      min-width: 550px;
+      margin-left: 400px;
+      position: relative;
+      .person{
+        width: 100%;
+        height: 70px;
+        padding: 20px 30px;
+        border-bottom: @border;
+        .statu{
+          line-height: 30px;
+          font-size: 18px;
+          display: inline-block;
+          span{
+            margin-left: 20px;
+            &.online{
+              color: @green;
+            }
+            &.offline{
+              color: #ffe212;
+            }
+            &.busy{
+              color: @red;
+            }
+          }
+        }
+        .tool{
+          display: inline-block;
+          width: 320px;
+          height: 30px;
+          float: right;
+          .toolbar{
+            display: inline-block;
+            width: 109px;
+            height: 100%;
+            border-radius: 5px;
+            line-height: 100%;
+            background: linear-gradient(#fff, 0.9 * #fff);
+            border: @border;
+            a{
+              padding: 0;
+              margin: 0;
+              width: 35px;
+              height: 28px;
+              border-right: @border;
+              box-sizing: content-box;
+              &:last-child{
+                border: none;
+              }
+            }
+          }
+          .page{
+            display: inline-block;
+            line-height: 30px;
+            height: 100%;
+            width: 190px;
+            border-left: @border;
+            padding-left: 20px;
+            margin: 0 0 0 20px;
+            float: right;
             p{
-              &.name a{
-                color: @blue;
-                &::before{
-                  content: "● ";
+              margin: 0;
+              display: inline-block;
+            }
+            ul{
+              display: inline-block;
+              float: right;
+              height: 100%;
+              width: 73px;
+              margin-left: 20px;
+              padding: 0;
+              list-style: none;
+              border: @border;
+              border-radius: 5px;
+              li{
+                float: left;
+                background: linear-gradient(#fff, 0.9 * #fff);
+                box-sizing: content-box;
+                width: 35px;
+                height: 100%;
+                &:first-child{
+                  border-right: @border;
+                }
+                a{
+                  width: 100%;
+                  height: 100%;
                 }
               }
             }
           }
         }
-        .share{
-          span{
+      }
+      .dialog{
+        height: 100%;
+        .history{
+          hr{
+            height: 1px;
+            border-top:@border;
+            margin: 10px 0 0;
+          }
+          .sending-date{
             display: block;
             width: auto;
-            height: 40px;
-            float: right;
-            padding: 10px 0 10px 10px;
-          }
-        }
-      }
-    }
-  }
-  /*第四列对话窗*/
-  .open-chat{
-    min-width: 550px;
-    margin-left: 400px;
-    height: inherit;
-    .person{
-      width: 100%;
-      height: 70px;
-      padding: 20px 30px;
-      border-bottom: @border;
-      .statu{
-        line-height: 30px;
-        font-size: 18px;
-        display: inline-block;
-        span{
-          margin-left: 20px;
-          &.online{
-            color: @green;
-          }
-          &.offline{
-            color: #ffe212;
-          }
-          &.busy{
-            color: @red;
-          }
-        }
-      }
-      .tool{
-        display: inline-block;
-        width: 320px;
-        height: 30px;
-        float: right;
-        .toolbar{
-          display: inline-block;
-          width: 109px;
-          height: 100%;
-          border-radius: 5px;
-          line-height: 100%;
-          background: linear-gradient(#fff, 0.9 * #fff);
-          overflow: hidden;
-          border: @border;
-          a{
-            padding: 0;
-            margin: 0;
-            width: 35px;
-            height: 28px;
-            border-right: @border;
-            box-sizing: content-box;
-            &:last-child{
-              border: none;
+            margin: -10px auto 20px;
+            color: @time;
+            text-align: center;
+            span{
+              padding: 0 20px;
+              background-color: #fff;
+              &.newly{
+                color: @blue;
+              }
             }
           }
-        }
-        .page{
-          display: inline-block;
-          line-height: 30px;
-          height: 100%;
-          width: 190px;
-          border-left: @border;
-          padding-left: 20px;
-          margin: 0 0 0 20px;
-          float: right;
-          p{
-            margin: 0;
-            display: inline-block;
-          }
-          ul{
-            display: inline-block;
-            float: right;
-            height: 100%;
-            width: 73px;
-            margin-left: 20px;
-            padding: 0;
-            list-style: none;
-            border: @border;
-            border-radius: 5px;
-            li{
-              float: left;
-              background: linear-gradient(#fff, 0.9 * #fff);
-              box-sizing: content-box;
-              width: 35px;
-              height: 100%;
-              &:first-child{
-                border-right: @border;
-              }
-              a{
+          .speech{
+            padding: 0 30px 10px 100px;
+            position: relative;
+            .photo{
+              position: absolute;
+              top: 0;
+              left: 30px;
+            }
+            .send-time{
+              margin-left: 10px;
+              color:@time;
+            }
+            .message{
+              margin: 10px 0;
+            }
+            .graphic{
+              display: inline-block;
+              width: 156px;
+              height: 102px;
+              border-radius: @border-radius;
+              margin: 15px 15px 0 0;
+              position: relative;
+              overflow: hidden;
+              img{
                 width: 100%;
                 height: 100%;
               }
-            }
-          }
-        }
-      }
-    }
-    .dialog{
-      position: relative;
-      height: 100%;
-      .history{
-        hr{
-          height: 1px;
-          border-top:@border;
-          margin: 10px 0 0;
-        }
-        .sending-date{
-          display: block;
-          width: auto;
-          margin: -10px auto 20px;
-          color: @time;
-          text-align: center;
-          span{
-            padding: 0 20px;
-            background-color: #fff;
-            &.newly{
-              color: @blue;
-            }
-          }
-        }
-        .speech{
-          padding: 0 30px 10px 100px;
-          position: relative;
-          .photo{
-            position: absolute;
-            top: 0;
-            left: 30px;
-          }
-          .send-time{
-            margin-left: 10px;
-            color:@time;
-          }
-          .message{
-            margin: 10px 0;
-          }
-          .graphic{
-            display: inline-block;
-            width: 156px;
-            height: 102px;
-            border-radius: @border-radius;
-            margin: 15px 15px 0 0;
-            position: relative;
-            overflow: hidden;
-            img{
-              width: 100%;
-              height: 100%;
-            }
-            &:hover::after{
-              content: "";
-              display: block;
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: rgba(0,0,0,0.5) url(img/icon.png) -170px -364px no-repeat;
+              &:hover::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5) url(img/icon.png) -170px -364px no-repeat;
+              }
             }
           }
         }
       }
       .send-message{
         position: absolute;
-        bottom: 150px;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 90px;

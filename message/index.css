@@ -10,6 +10,21 @@ body {
   font-family: "Myriad Pro", sans-serif;
   color: #585d68;
 }
+.scrollbar {
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16px;
+  border-radius: 8px;
+  background-color: rgba(120, 120, 120, 0.5);
+}
+.scrollbar .bar {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
 a,
 button,
 input {
@@ -206,18 +221,19 @@ li.active::before {
   width: 100px;
   height: 100%;
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   /*第一列顶部*/
   /*第一列底部*/
 }
 .menu .primary .app-items {
   width: 100%;
   height: 100%;
-  margin-bottom: 60px;
-  overflow: hidden;
+  margin-bottom: 80px;
 }
 .menu .primary .app-items ul {
+  float: left;
   padding: 0;
+  margin: 0;
   width: 100%;
   height: 100%;
   list-style: none;
@@ -237,6 +253,7 @@ li.active::before {
   overflow: hidden;
 }
 .menu .primary .button-action {
+  background-color: #1d2531;
   width: 100%;
   height: 80px;
   position: absolute;
@@ -266,19 +283,23 @@ li.active::before {
 }
 .menu .secondary {
   margin-left: 100px;
-  background-color: #222c3c;
   width: 250px;
   height: 100%;
-  padding: 5px 0 60px;
-  overflow: hidden;
   position: relative;
-  /*第二列三个列表*/
+  padding-bottom: 80px;
   /*第二列底部*/
 }
-.menu .secondary .menu-items {
+.menu .secondary .menu-group {
+  height: 100%;
+  width: 100%;
+  background-color: #222c3c;
+  padding-top: 5px;
+  /*第二列三个列表*/
+}
+.menu .secondary .menu-group .menu-items {
   width: 100%;
 }
-.menu .secondary .menu-items h6 {
+.menu .secondary .menu-group .menu-items h6 {
   padding: 0 30px;
   margin: 30px 0 20px;
   color: #5b6779;
@@ -288,27 +309,27 @@ li.active::before {
   font-size: 12px;
   line-height: 20px;
 }
-.menu .secondary .menu-items h6 a {
+.menu .secondary .menu-group .menu-items h6 a {
   position: absolute;
   top: -3px;
   right: 30px;
   height: 20px;
   width: 20px;
 }
-.menu .secondary .menu-items ul {
+.menu .secondary .menu-group .menu-items ul {
   width: 100%;
   list-style: none;
   padding: 0 0 20px 0;
   margin: 0;
 }
-.menu .secondary .menu-items ul li {
+.menu .secondary .menu-group .menu-items ul li {
   padding: 0 30px;
   position: relative;
   width: 100%;
   height: 40px;
   line-height: 20px;
 }
-.menu .secondary .menu-items ul li a {
+.menu .secondary .menu-group .menu-items ul li a {
   display: block;
   padding: 10px 0;
   width: 100%;
@@ -316,22 +337,16 @@ li.active::before {
   color: #b7c0cd;
   text-decoration: none;
   position: relative;
-  /*i{
-              //width: @icon;
-              &.num{
-                width: auto;
-              }
-            }*/
 }
-.menu .secondary .menu-items ul li a:hover {
+.menu .secondary .menu-group .menu-items ul li a:hover {
   font-weight: 600;
   color: #fff;
 }
-.menu .secondary .menu-items ul li.active a {
+.menu .secondary .menu-group .menu-items ul li.active a {
   font-weight: 600;
   color: #fff;
 }
-.menu .secondary hr {
+.menu .secondary .menu-group hr {
   display: block;
   margin: 0 30px;
   padding: 0;
@@ -357,7 +372,6 @@ li.active::before {
   width: 100%;
   height: 5px;
   border-radius: 5px;
-  overflow: hidden;
   background-color: #5b6779;
 }
 .menu .secondary .monthly-goal .progress span {
@@ -372,8 +386,6 @@ li.active::before {
   margin-left: 350px;
   height: 100%;
   /*第三，四列顶部*/
-  /*第三列*/
-  /*第四列对话窗*/
 }
 .chat header {
   padding: 0 30px;
@@ -428,22 +440,28 @@ li.active::before {
 .chat header .my-profile p.title a {
   color: #b5b5b5;
 }
-.chat .more-chats {
+.chat .main {
+  height: 100%;
+  padding-bottom: 80px;
+  /*第三列*/
+  /*第四列对话窗*/
+}
+.chat .main .more-chats {
   float: left;
+  height: 100%;
   width: 400px;
-  height: inherit;
+  padding-bottom: 70px;
   border-right: 1px solid #e6e9ec;
-  margin-bottom: 80px;
   /*第三列搜索框*/
   /*第三列动态框*/
 }
-.chat .more-chats .search {
+.chat .main .more-chats .search {
   padding: 20px 30px;
   height: 70px;
   position: relative;
   border-bottom: 1px solid #e6e9ec;
 }
-.chat .more-chats .search input {
+.chat .main .more-chats .search input {
   outline: none;
   border-radius: 5px;
   width: 100%;
@@ -452,110 +470,110 @@ li.active::before {
   padding-left: 15px;
   border: 1px solid #e6e9ec;
 }
-.chat .more-chats .search .icon {
+.chat .main .more-chats .search .icon {
   position: absolute;
   top: 25px;
   right: 40px;
   height: 20px;
   width: 20px;
 }
-.chat .more-chats .news-group {
-  padding-bottom: 150px;
+.chat .main .more-chats .news-group {
+  float: left;
   height: 100%;
 }
-.chat .more-chats .news-group .news {
+.chat .main .more-chats .news-group .news {
   width: 100%;
   height: 130px;
   padding: 0 20px 0 30px;
   border-bottom: 1px solid #e6e9ec;
-  overflow: hidden;
   /*第三列动态框个人信息*/
 }
-.chat .more-chats .news-group .news .profile {
+.chat .main .more-chats .news-group .news .profile {
   width: 100%;
   height: 80px;
   padding: 15px 70px;
   position: relative;
 }
-.chat .more-chats .news-group .news .profile > a {
+.chat .main .more-chats .news-group .news .profile > a {
   text-decoration: none;
   position: absolute;
 }
-.chat .more-chats .news-group .news .profile > a.photo {
+.chat .main .more-chats .news-group .news .profile > a.photo {
   left: 0;
 }
-.chat .more-chats .news-group .news .profile > a.date {
+.chat .main .more-chats .news-group .news .profile > a.date {
   right: 0;
   top: 20px;
   color: #7f8fa4;
 }
-.chat .more-chats .news-group .news .profile p {
+.chat .main .more-chats .news-group .news .profile p {
   margin: 5px 0 0;
 }
-.chat .more-chats .news-group .news .profile p.title a {
+.chat .main .more-chats .news-group .news .profile p.title a {
   color: #b5b5b5;
 }
-.chat .more-chats .news-group .news.active {
+.chat .main .more-chats .news-group .news.active {
   border-left: 3px solid #2ca0f7;
 }
-.chat .more-chats .news-group .news.active .profile p.name a {
+.chat .main .more-chats .news-group .news.active .profile p.name a {
   color: #2ca0f7;
 }
-.chat .more-chats .news-group .news.active .profile p.name a::before {
+.chat .main .more-chats .news-group .news.active .profile p.name a::before {
   content: "● ";
 }
-.chat .more-chats .news-group .news .share span {
+.chat .main .more-chats .news-group .news .share span {
   display: block;
   width: auto;
   height: 40px;
   float: right;
   padding: 10px 0 10px 10px;
 }
-.chat .open-chat {
+.chat .main .open-chat {
+  height: 100%;
+  padding-bottom: 160px;
   min-width: 550px;
   margin-left: 400px;
-  height: inherit;
+  position: relative;
 }
-.chat .open-chat .person {
+.chat .main .open-chat .person {
   width: 100%;
   height: 70px;
   padding: 20px 30px;
   border-bottom: 1px solid #e6e9ec;
 }
-.chat .open-chat .person .statu {
+.chat .main .open-chat .person .statu {
   line-height: 30px;
   font-size: 18px;
   display: inline-block;
 }
-.chat .open-chat .person .statu span {
+.chat .main .open-chat .person .statu span {
   margin-left: 20px;
 }
-.chat .open-chat .person .statu span.online {
+.chat .main .open-chat .person .statu span.online {
   color: #1bb934;
 }
-.chat .open-chat .person .statu span.offline {
+.chat .main .open-chat .person .statu span.offline {
   color: #ffe212;
 }
-.chat .open-chat .person .statu span.busy {
+.chat .main .open-chat .person .statu span.busy {
   color: #ec4b2f;
 }
-.chat .open-chat .person .tool {
+.chat .main .open-chat .person .tool {
   display: inline-block;
   width: 320px;
   height: 30px;
   float: right;
 }
-.chat .open-chat .person .tool .toolbar {
+.chat .main .open-chat .person .tool .toolbar {
   display: inline-block;
   width: 109px;
   height: 100%;
   border-radius: 5px;
   line-height: 100%;
   background: linear-gradient(#fff, #e6e6e6);
-  overflow: hidden;
   border: 1px solid #e6e9ec;
 }
-.chat .open-chat .person .tool .toolbar a {
+.chat .main .open-chat .person .tool .toolbar a {
   padding: 0;
   margin: 0;
   width: 35px;
@@ -563,10 +581,10 @@ li.active::before {
   border-right: 1px solid #e6e9ec;
   box-sizing: content-box;
 }
-.chat .open-chat .person .tool .toolbar a:last-child {
+.chat .main .open-chat .person .tool .toolbar a:last-child {
   border: none;
 }
-.chat .open-chat .person .tool .page {
+.chat .main .open-chat .person .tool .page {
   display: inline-block;
   line-height: 30px;
   height: 100%;
@@ -576,11 +594,11 @@ li.active::before {
   margin: 0 0 0 20px;
   float: right;
 }
-.chat .open-chat .person .tool .page p {
+.chat .main .open-chat .person .tool .page p {
   margin: 0;
   display: inline-block;
 }
-.chat .open-chat .person .tool .page ul {
+.chat .main .open-chat .person .tool .page ul {
   display: inline-block;
   float: right;
   height: 100%;
@@ -591,60 +609,59 @@ li.active::before {
   border: 1px solid #e6e9ec;
   border-radius: 5px;
 }
-.chat .open-chat .person .tool .page ul li {
+.chat .main .open-chat .person .tool .page ul li {
   float: left;
   background: linear-gradient(#fff, #e6e6e6);
   box-sizing: content-box;
   width: 35px;
   height: 100%;
 }
-.chat .open-chat .person .tool .page ul li:first-child {
+.chat .main .open-chat .person .tool .page ul li:first-child {
   border-right: 1px solid #e6e9ec;
 }
-.chat .open-chat .person .tool .page ul li a {
+.chat .main .open-chat .person .tool .page ul li a {
   width: 100%;
   height: 100%;
 }
-.chat .open-chat .dialog {
-  position: relative;
+.chat .main .open-chat .dialog {
   height: 100%;
 }
-.chat .open-chat .dialog .history hr {
+.chat .main .open-chat .dialog .history hr {
   height: 1px;
   border-top: 1px solid #e6e9ec;
   margin: 10px 0 0;
 }
-.chat .open-chat .dialog .history .sending-date {
+.chat .main .open-chat .dialog .history .sending-date {
   display: block;
   width: auto;
   margin: -10px auto 20px;
   color: #7f8fa4;
   text-align: center;
 }
-.chat .open-chat .dialog .history .sending-date span {
+.chat .main .open-chat .dialog .history .sending-date span {
   padding: 0 20px;
   background-color: #fff;
 }
-.chat .open-chat .dialog .history .sending-date span.newly {
+.chat .main .open-chat .dialog .history .sending-date span.newly {
   color: #2ca0f7;
 }
-.chat .open-chat .dialog .history .speech {
+.chat .main .open-chat .dialog .history .speech {
   padding: 0 30px 10px 100px;
   position: relative;
 }
-.chat .open-chat .dialog .history .speech .photo {
+.chat .main .open-chat .dialog .history .speech .photo {
   position: absolute;
   top: 0;
   left: 30px;
 }
-.chat .open-chat .dialog .history .speech .send-time {
+.chat .main .open-chat .dialog .history .speech .send-time {
   margin-left: 10px;
   color: #7f8fa4;
 }
-.chat .open-chat .dialog .history .speech .message {
+.chat .main .open-chat .dialog .history .speech .message {
   margin: 10px 0;
 }
-.chat .open-chat .dialog .history .speech .graphic {
+.chat .main .open-chat .dialog .history .speech .graphic {
   display: inline-block;
   width: 156px;
   height: 102px;
@@ -653,11 +670,11 @@ li.active::before {
   position: relative;
   overflow: hidden;
 }
-.chat .open-chat .dialog .history .speech .graphic img {
+.chat .main .open-chat .dialog .history .speech .graphic img {
   width: 100%;
   height: 100%;
 }
-.chat .open-chat .dialog .history .speech .graphic:hover::after {
+.chat .main .open-chat .dialog .history .speech .graphic:hover::after {
   content: "";
   display: block;
   position: absolute;
@@ -667,16 +684,16 @@ li.active::before {
   height: 100%;
   background: rgba(0, 0, 0, 0.5) url(img/icon.png) -170px -364px no-repeat;
 }
-.chat .open-chat .dialog .send-message {
+.chat .main .open-chat .send-message {
   position: absolute;
-  bottom: 150px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 90px;
   background-color: #fff;
   padding: 20px 30px 20px 80px;
 }
-.chat .open-chat .dialog .send-message button {
+.chat .main .open-chat .send-message button {
   border: 1px solid #e6e9ec;
   width: 50px;
   height: 50px;
@@ -687,11 +704,11 @@ li.active::before {
   background: linear-gradient(#fff, #e6e6e6);
   border-radius: 5px 0 0 5px;
 }
-.chat .open-chat .dialog .send-message button .send {
+.chat .main .open-chat .send-message button .send {
   width: 100%;
   height: 100%;
 }
-.chat .open-chat .dialog .send-message textarea {
+.chat .main .open-chat .send-message textarea {
   display: inline-block;
   width: 100%;
   padding: 15px 20px;
