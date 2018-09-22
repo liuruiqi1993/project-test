@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>聊天室系统</title>
+</head>
+<body>
+	<h1>haha</h1>
+	<form action="">
+		<input type="text" id="mes" name="">
+		<input type="button" id="btn" name="" value="send">
+	</form>
+	<script type="text/javascript" src="http://wulv5.com/js/socket.io.min.js"></script>
+	<script type="text/javascript">
+		//每一次打开客户端就接进聊天室
+		var sockect = io.connect("/");
+		var mes = document.getElementById("mes");
+		var btn = document.getElementById("btn");
+
+		btn.onclick = function(){
+			var val = mes.value;
+			sockect.send(val);
+			mes.value = "";
+		}
+		socket.on("message",function(mes){
+
+	 		var p = document.createElement("p");
+
+	 		p.innerText = mes;
+
+	 		document.body.appendChild(p);
+
+	 	});
+	</script>
+</body>
+</html>

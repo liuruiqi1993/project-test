@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>酷狗首页音乐播放器 - 新奇老师</title>
+    <meta name='KeyWords' content=''>
+    <meta name='Description' content=''>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: "Microsoft YaHei";
+        }
+        a{
+            text-decoration: none;
+        }
+        .header{
+            height: 80px;
+            background: #fff;
+        }
+        .nav{
+            height: 60px;
+            background: rgb(44,50,59);
+        }
+        .container{
+            background-color: rgb(15,45,95);
+        }
+        .container .c-content{
+            width: 840px;
+            height: 610px;
+            padding-top: 75px;
+            margin: 0 auto;
+        }
+        .c-content .c-c-album{
+            float: left;
+            width: 260px;
+            height: 610px;
+        }
+        .c-content .c-c-album .c-album-show{
+            width: 260px;
+            height: 260px;
+        }
+        .c-content .c-c-album .c-album-download{
+            width: 230px;
+            height: 50px;
+            margin: 40px auto 0;
+            border-radius: 24px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid rgb(215,218,216);
+        }
+        .c-c-album .c-album-download a{
+            color: rgb(215,218,216);
+        }
+        .c-content .c-c-list{
+            float: right;
+            width: 465px;
+            height: 610px;
+        }
+        .c-content .c-c-list h4{
+            font-size: 22px;
+            font-weight: normal;
+            color: #fff;
+        }
+        .c-c-list .c-c-list-synopsis{
+            overflow: hidden;
+        }
+        .c-c-list .c-c-list-synopsis .list-synopsis-name{
+            float: left;
+        }
+        .c-c-list .c-c-list-synopsis .list-synopsis-singer{
+            float: left;
+            margin-left: 125px;
+        }
+        .c-c-list-synopsis .fontColor{
+            font-size: 14px;
+            color: rgb(160,163,163);
+        }
+        .c-c-list-synopsis a{
+            font-size: 14px;
+            color: #fff;
+        }
+        .c-c-list .c-list-lyrics{
+            position: relative;
+            margin-top: 17px;
+            height: 415px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .c-c-list .c-list-lyrics::-webkit-scrollbar {
+            width: 5px;
+            background: #e4e4e4;
+        }
+        .c-c-list .c-list-lyrics::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+        .c-c-list .jspPane{
+            height: 415px;
+        }
+        .progress{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(0,0,0,.3);
+        }
+        .progress .p-content{
+            width: 960px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        .p-content .p-content-left{
+            width: 160px;
+            height: 80px;
+            float: left;
+        }
+        .p-content .p-content-left a{
+            float: left;
+            background-image: url("images/btn.png");
+        }
+        .p-content .p-content-left .prev{
+            width: 36px;
+            height: 37px;
+            margin-left: -7px;
+            margin-top: 22px;
+            background-position: 0 -143px;
+        }
+        .p-content .p-content-left .play{
+            width: 60px;
+            height: 60px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .p-content .p-content-left .next{
+            width: 36px;
+            height: 37px;
+            margin-left: 10px;
+            margin-top: 22px;
+            background-position: 84px -143px;
+        }
+        .p-content .p-content-img{
+            float: left;
+            width: 60px;
+            height: 60px;
+            margin-left: 35px;
+            margin-top: 10px;
+
+        }
+        .p-content-bar{
+            float: left;
+            width: 370px;
+            height: 80px;
+            margin-left: 15px;
+        }
+        .p-content-bar .song-info{
+            padding-top: 18px;
+            height: 24px;
+            color: #c4c3c3;
+            font-size: 13px;
+        }
+        .p-content-bar .song-info .like-song{
+            float: left;
+            width: 290px;
+            height: 24px;
+        }
+        .p-content-bar .song-info .coding-duration{
+            float: right;
+            height: 24px;
+        }
+        .song-info .coding-duration i{
+            font-style: normal;
+            font-size: 12px;
+        }
+        .p-content-bar .pro{
+            margin-top: 11px;
+            height: 5px;
+            cursor: pointer;
+        }
+        .p-content-bar .pro .progress-middle{
+            position: absolute;
+            margin-left: 2px;
+            width: 370px;
+            height: 3px;
+            overflow: hidden;
+            background-color: rgba(0,0,0,.2);
+        }
+        .pro .progress-middle .progress-move{
+            position: absolute;
+            width: 10px;
+            height: 3px;
+            background-color: #28a3ef;
+        }
+        .pro .drag-playhead{
+            position: absolute;
+            margin-top: -5px;
+            width: 371px;
+            height: 12px;
+        }
+        .pro .drag-playhead .icon-playhead{
+            display: block;
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+            background: url('images/btn.png');
+            background-repeat: no-repeat;
+            background-position: -217px -181px;
+        }
+        .c-list-lyrics .jspPane p{
+            width: 420px;
+            height: 34px;
+            line-height: 30px;
+            font-size: 15px;
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="nav"></div>
+    <div class="container">
+        <div class="c-content">
+                <div class="c-c-album">
+                    <div class="c-album-show">
+                        <a href="#">
+                            <img src="images/show.jpg" alt="" width="100%" height="100%">
+                        </a>
+                    </div>
+                    <div class="c-album-download">
+                        <a href="#">下载这首歌</a>
+                    </div>
+                </div>
+                <div class="c-c-list">
+                    <h4>海阔天空</h4>
+                    <div class="c-c-list-synopsis">
+                        <p class="list-synopsis-name on">
+                            <span class="fontColor">专辑</span>
+                            <a href="#">旧日笔记</a>
+                        </p>
+                        <p class="list-synopsis-singer on">
+                            <span class="fontColor">歌手</span>
+                            <a href="#">Beyond</a>
+                        </p>
+                    </div>
+                    <div class="c-list-lyrics">
+                        <div class="jspContainer">
+                            <div class="jspPane">
+
+
+
+
+                                
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="p-content">
+            <div class="p-content-left">
+                <a href="#" class="prev"></a>
+                <a href="#" class="play"></a>
+                <a href="#" class="next"></a>
+            </div>
+            <div class="p-content-img">
+                <a href="#">
+                    <img src="images/show.jpg" alt="" width="60" height="60">
+                </a>
+            </div>
+            <div class="p-content-bar">
+                <div class="song-info">
+                    <div class="like-song">海阔天空</div>
+                    <div class="coding-duration">
+                        <i class="change-time">00:00</i>
+                        /
+                        <i class="all-time">00:00</i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <div class="progress-middle">
+                        <span class="progress-move"></span>
+                    </div>
+                    <div class="drag-playhead">
+                        <span class="icon-playhead"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-content-right">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="./lyrics/lyrics.js"></script>
+    <audio src="./music/0.mp3" id="audio"></audio>
+    <script>
+        var onOrOff = true;
+        $(".play")[0].onclick = function(){
+            if(onOrOff){
+                $("#audio")[0].play();
+                onOrOff = false;
+                this.style.backgroundPositionY="-60px"
+                ProgressTime();
+            }else{
+                $("#audio")[0].pause();
+                onOrOff = true;
+                this.style.backgroundPositionY=0
+            }
+        }
+        function init(){
+            var str="";
+            var g = songData[0].songLyrics.split("[");
+            g.forEach(function(current){
+                var h = current.split("]");
+                var lyrics = h[1];
+                if(lyrics){
+                    str+="<p>"+lyrics+"</p>";
+                }
+                $(".jspPane")[0].innerHTML=str;
+            });
+        }
+        init();
+
+        function ProgressTime(){
+            var a = $("#audio").currentTime;
+            var b = $("#audio")[0].duration;
+            var c = $(".drag-playhead")[0].offsetWidth;
+            var n = c*a/b;
+            console.log(n);
+        }
+    </script>
+</body>
+</html>
